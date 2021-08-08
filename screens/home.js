@@ -3,12 +3,12 @@ import { StyleSheet, View, Text, TouchableOpacity, FlatList } from 'react-native
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 
-export default function Home({ navigation }) {
+export default function Home() {
 
 
   return (
-    <View style={globalStyles.container}>
-            <Text style={globalStyles.titleText}>Home Page</Text>
+    <View >
+            <Text> Home Page</Text>
     </View>
   );
 }
