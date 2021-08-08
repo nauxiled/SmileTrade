@@ -4,7 +4,7 @@ import { globalStyles } from '../styles/global';
 
 export default function About({ navigation} ) {
   return (
-    <View style={globalStyles.container}>
+    <View>
       <Text>About Screen</Text>
     </View>
   );

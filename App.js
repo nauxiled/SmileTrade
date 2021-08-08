@@ -11,8 +11,14 @@ import {
 import AppLoading from 'expo-app-loading'; 
 
 import {useFonts} from 'expo-font';
-
-const Drawer = createDrawerNavigator();
+import Login from './screens/Login';
+import Welcome from './screens/Welcome';
+import Signup from './screens/Signup';
+import { createStackNavigator } from '@react-navigation/stack';
+import AuthNavigator from './routes/AuthNavigation';
+import AppNavigator from './routes/AppNavigator';
+//const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 function App() {
   let [fontsLoaded,error] =useFonts({ Satisfy_400Regular}); // IF you want to use your own fonts, ihave created a file ' Fonts" u just need to input your ttf file and declare it here using require('file directory')
@@ -24,21 +30,49 @@ function App() {
   else{
     return (
       <NavigationContainer>
-       <Drawer.Navigator
-         drawerStyle={{
-           backgroundColor: '#CEE7F0'}}
-         screenOptions={{
-           headerShown : true,
+        <AuthNavigator/>
+      </NavigationContainer>
+    );
+
+    //   <NavigationContainer>
+    //   <Stack.Navigator 
+    //   screenOptions={{
+    //     header: () => null
+    //   }}
+    //   >
+    //     <Stack.Screen
+    //       name="Login"
+    //       component={Login}
+    //     />
+    //     <Stack.Screen
+    //       name="Signup"
+    //       component={Signup}
+    //     />
+    //     <Stack.Screen
+    //       name="Home"
+    //       component={Home}
+    //     />
+    //   </Stack.Navigator>
+      
+    // </NavigationContainer>
+      
+  //     <NavigationContainer>
+  //      <Drawer.Navigator
+  //        drawerStyle={{
+  //          backgroundColor: '#CEE7F0'}}
+  //        screenOptions={{
+  //          headerShown : true,
            
-         }}>
-         <Drawer.Screen name="Home" component={Home}  />
-         <Drawer.Screen name="About" component={About} />
-         <Drawer.Screen name="Chat" component={Chat} />
+  //        }}>
+  //        <Drawer.Screen name="Home" component={Home}  />
+  //        <Drawer.Screen name="About" component={About} />
+  //        <Drawer.Screen name="Chat" component={Chat} />
  
-       </Drawer.Navigator>
-     </NavigationContainer>
-   );
-  }
+  //      </Drawer.Navigator>
+  //    </NavigationContainer>
+  //  );
+   
+}
  
 }
 

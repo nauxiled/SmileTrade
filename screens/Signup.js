@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { ImageBackground } from 'react-native';
 import { View, Image ,TextInput, TouchableOpacity, Text } from 'react-native';
 
-import firebase from '../../firebase/firebase';
+import firebase from '../firebase/firebase';
 
 import {styles} from '../styles/global';
 

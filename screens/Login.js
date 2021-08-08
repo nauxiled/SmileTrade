@@ -3,7 +3,7 @@ import { View, TextInput, TouchableOpacity, Text, ImageBackground, Image } from 
 
 import {styles} from '../styles/global';
 
-import firebase from '../firebase/firebase';
+import firebase from '../firebase/firebase'
 
 
 export default function Login({navigation}) {
@@ -23,14 +23,14 @@ export default function Login({navigation}) {
     const signIn= async()=>{
         try{
             firebase.auth().signInWithEmailAndPassword(email, password);
-            navigation.navigate('Welcome');
+            navigation.navigate('Home');
         }catch(err){
             setError(err.message);
         }
     }
 
     return (
-        
+    
         <ImageBackground 
         style={styles.background}
         source={require('../assets/Beachbackground.png')}
