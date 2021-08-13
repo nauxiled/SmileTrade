@@ -26,3 +26,4 @@ const AppNavigator = () => (
 
 
 export default AppNavigator;
+// EditItem navigatotr
