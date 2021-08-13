@@ -1,110 +1,94 @@
-import React, {useState} from 'react';
-import { ImageBackground } from 'react-native';
-import { View, Image ,TextInput, TouchableOpacity, Text } from 'react-native';
+import React from 'react';
+import { ImageBackground, StyleSheet, Image, Text } from  'react-native';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
-import firebase from '../firebase/firebase';
+import Screen from '../Components/Screen';
+import AppFormField from '../Components/AppFormField';
+import SubmitButton from '../Components/SubmitButton';
 
-import {styles} from '../styles/global';
+const validationSchema = Yup.object().shape({
+    fname: Yup.string().required().label("First Name"),
+    lname: Yup.string().required().label("Last Name"),
+    email: Yup.string().required().email().label("Email"),
+    password: Yup.string().required().min(6).label("Password"),
+})
 
-
-export default function Signup({navigation}) {
-
-    const goToLogin= () => {
-        navigation.navigate('Login');
-    }
-
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-
-    const signUp= async()=>{
-        try{
-            firebase.auth().createUserWithEmailAndPassword(email, password);
-            navigation.navigate('Login');
-        }catch(err){
-            setError(err.message);
-        }
-    }
-
+function SignUp(props) {
     return (
-
         <ImageBackground 
-        style={styles.background}
-        source={require('../assets/Beachbackground.png')}
-        >
-            <View style={styles.logoContainer}>
-                <Image 
-                style={styles.logo}
-                source={require('../assets/smileTrade.png')}
-                />
-            </View> 
-
-            <View style={styles.reg}>
-                <Text style={styles.header}>Registration</Text>
-
-                {/* <TextInput 
-                style={styles.textInput} 
-                placeholder="Your name"
-                underlineColorAndroid={'transparent'}
-                /> */}
-
-                <TextInput 
-                style={styles.textInput} 
-                placeholder="Your email"
-                underlineColorAndroid={'transparent'}
-                value={email}
-                onChangeText={setEmail}
-                />
-
-                <TextInput 
-                style={styles.textInput} 
-                placeholder="Your password"
-                underlineColorAndroid={'transparent'}
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry={true}
-                />
-
-                {/* <TextInput 
-                style={styles.textInput} 
-                placeholder="Confirm password"
-                underlineColorAndroid={'transparent'}
-                secureTextEntry={true}
-                /> */}
-
-                {
-                    error?
-                    <Text style={{color:'red'}}>{error}</Text>
-                    : null
-                }
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={signUp}
+        style = {styles.background}
+        source= {require('../assets/Beachbackground.png')}>
+        <Screen style={styles.container}>
+        <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
+            <Formik
+                initialValues = {{ fname: '',lname: '', email: '', password: '' }}
+                onSubmit={values => console.log(values)}
+                validationSchema = {validationSchema}
                 >
-                    <Text style={styles.btnText}>Sign up</Text>
-
-                </TouchableOpacity>
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={goToLogin}
-                >
-                    <Text style={styles.btnText}>Already a user? Sign in!</Text>
-
-                </TouchableOpacity>
-
-            </View>
-        
-
-
+                    { () => (
+                        <>
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "human-greeting"
+                                name = 'fname'
+                                placeholder = "First name"
+                            />
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "human-greeting"
+                                name = 'lname'
+                                placeholder = "Last name"
+                            />
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "email"
+                                keyboardType = "email-address"
+                                name = 'email'
+                                placeholder = "Email"
+                                textContentType = "emailAddress"
+                            />
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "lock"
+                                name = 'password'
+                                placeholder = "Password"
+                                secureTextEntry
+                                textContentType = "password"
+                            />
+                            <SubmitButton title="Register"/>
+                        </>
+                    )}
+            </Formik>
+        </Screen>
         </ImageBackground>
-
-
-
-
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 50
+    },
+     logo:{
+         width: '100%',
+         height: 200,
+         alignSelf: 'center',
+         marginBottom: 100
+     },
+     background: {
+        flex: 1,
+        justifyContent: "flex-end",
+
+    },
+})
+
+export default SignUp;
+
+
 
 // const styles = StyleSheet.create({
 //     background: {

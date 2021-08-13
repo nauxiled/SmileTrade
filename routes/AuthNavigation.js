@@ -3,7 +3,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
-import Home from '../screens/home';
+import Welcome from '../screens/Welcome';
 import AppNavigator from './AppNavigator';
 
 const Stack = createStackNavigator();
@@ -13,6 +13,10 @@ const AuthNavigator = () => (
         header: () => null
       }}
       >
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+        />
         <Stack.Screen
           name="Login"
           component={Login}

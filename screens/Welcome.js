@@ -1,55 +1,38 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, View } from 'react-native';
+import AppButton from '../Components/AppButton';
 
-import colors from '../styles/color';
 
-export default function Welcome({navigation}) {
+function Welcome({navigation}) {
     return (
         <ImageBackground 
-        style={styles.background}
-        source={require('../assets/Beachbackground.png')}
-        >
-            <View style={styles.logoContainer}>
-                <Image 
-                style={styles.logo}
-                source={require('../assets/smileTrade.png')}
-                />
-                <Text style={styles.logoText}>Welcome to SmileTrade!</Text>
+        style = {styles.background}
+        source={require('../assets/Beachbackground.png')}>
+            <Image style={styles.logo} source={require('../assets/smileTrade.png')} />
+            <View style={styles.buttonContainer}>
+            <AppButton title="Sign In" onPress={() => navigation.navigate('Login')} ></AppButton>
+            <AppButton title="Sign Up" onPress={() => navigation.navigate('Signup')}></AppButton>
             </View>
-
-            <View style={styles.loginButton}></View>
-
-            <View style={styles.registerButton}></View>
         </ImageBackground>
     );
 }
 
 const styles = StyleSheet.create({
+    buttonContainer: {
+        padding: 20,
+        width: "100%"
+    },
     background: {
         flex: 1,
         justifyContent: "flex-end",
         alignItems: "center",
     },
     logo: {
-        width: 170,
-        height: 170,
-    },
-    logoContainer: {
+        width: "100%",
+        height: 200,
         position: 'absolute',
-        top: 70,
-        alignItems: "center",
-    },
-    logoText: {
-        fontWeight: 'bold',
-    },
-    loginButton: {
-        width: '100%',
-        height: 70,
-        backgroundColor: colors.primary,
-    },
-    registerButton: {
-        width: '100%',
-        height: 70,
-        backgroundColor: colors.secondary,
-    },
-});
+        top: 150,
+    }
+})
+
+export default Welcome;

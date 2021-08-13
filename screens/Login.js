@@ -1,94 +1,74 @@
-import React, {useState} from 'react';
-import { View, TextInput, TouchableOpacity, Text, ImageBackground, Image } from 'react-native';
+import React from 'react';
+import { ImageBackground, StyleSheet, Image, Text } from  'react-native';
+// import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { Formik } from 'formik';
 
-import {styles} from '../styles/global';
+import Screen from '../Components/Screen';
+import AppFormField from '../Components/AppFormField';
+import SubmitButton from '../Components/SubmitButton';
 
-import firebase from '../firebase/firebase'
+const validationSchema = Yup.object().shape({
+    email: Yup.string().required().email().label("Email"),
+    password: Yup.string().required().min(6).label("Password"),
+})
 
-
-export default function Login({navigation}) {
-
-    const goToSignup = () => {
-        navigation.navigate('Signup');
-    }
-
-    const goToHome = () => {
-        navigation.navigate('Welcome');
-    }
-
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-
-    const signIn= async()=>{
-        try{
-            firebase.auth().signInWithEmailAndPassword(email, password);
-            navigation.navigate('Home');
-        }catch(err){
-            setError(err.message);
-        }
-    }
-
+function Login({navigation}) {
     return (
-    
         <ImageBackground 
-        style={styles.background}
-        source={require('../assets/Beachbackground.png')}
-        >
-
-            <View style={styles.logoContainer}>
-                <Image 
-                style={styles.logo}
-                source={require('../assets/smileTrade.png')}
-                />
-            </View> 
-       
-            <View style={styles.reg}>
-                <Text style={styles.header}>Welcome!</Text>
-
-                <TextInput 
-                style={styles.textInput} 
-                placeholder="Your email"
-                underlineColorAndroid={'transparent'}
-                value={email}
-                onChangeText={setEmail}
-                />
-
-                <TextInput 
-                style={styles.textInput} 
-                placeholder="Your password"
-                underlineColorAndroid={'transparent'}
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry={true}
-                />
-
-                {
-                    error?
-                    <Text style={{color:'red'}}>{error}</Text>
-                    : null
-                }
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={signIn}
+        style = {styles.background}
+        source= {require('../assets/Beachbackground.png')}>
+        <Screen style={styles.container}>
+        <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
+            <Formik
+                initialValues = {{ email: '', password: '' }}
+                onSubmit={values => console.log(values)}
+                validationSchema = {validationSchema}
                 >
-                    <Text style={styles.btnText}>Login</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={goToSignup}
-                >
-                    <Text 
-                    style={styles.btnText}
-                    >Create new account</Text>
-                </TouchableOpacity>
-
-            </View>
-
-
+                    { () => (
+                        <>
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "email"
+                                keyboardType = "email-address"
+                                name = 'email'
+                                placeholder = "Email"
+                                textContentType = "emailAddress"
+                            />
+                            <AppFormField
+                                autoCapitalize = "none"
+                                autoCorrect = {false}
+                                icon = "lock"
+                                name = 'password'
+                                placeholder = "Password"
+                                secureTextEntry
+                                textContentType = "password"
+                            />
+                            <SubmitButton title="Login" onPress={() => navigation.navigate('Home')}/>
+                        </>
+                    )}
+            </Formik>
+        </Screen>
         </ImageBackground>
     );
 }
 
+const styles = StyleSheet.create({
+    container: {
+        padding: 50
+    },
+     logo:{
+         width: '100%',
+         height: 200,
+         alignSelf: 'center',
+         marginBottom: 300
+     },
+     background: {
+        flex: 1,
+        justifyContent: "flex-end",
+
+    },
+})
+
+export default Login;

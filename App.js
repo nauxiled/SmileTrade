@@ -2,9 +2,7 @@ import * as React from 'react';
 import { Pressable, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from './screens/home';
-import About from './screens/about'
-import Chat from './screens/chat'
+import Chat from './screens/Chat';
 import { 
   Satisfy_400Regular 
 } from '@expo-google-fonts/satisfy'
@@ -17,6 +15,8 @@ import Signup from './screens/Signup';
 import { createStackNavigator } from '@react-navigation/stack';
 import AuthNavigator from './routes/AuthNavigation';
 import AppNavigator from './routes/AppNavigator';
+import AddItem from './screens/AddItem';
+import EditItem from './screens/EditItem';
 //const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
@@ -29,9 +29,10 @@ function App() {
 
   else{
     return (
-      <NavigationContainer>
-        <AuthNavigator/>
-      </NavigationContainer>
+     <Chat/>
+      // <NavigationContainer>
+      //   <AuthNavigator/>
+      // </NavigationContainer>
     );
 
     //   <NavigationContainer>
