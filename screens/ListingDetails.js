@@ -6,13 +6,13 @@ import ListItem from "../Components/ListItem";
 function ListingDetails(props) {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("/Users/durga/Desktop/agile/DoneWithIt/app/assets/redJacket.jpg")} />
+      <Image style={styles.image} source={require("redJacket.jpg")} /> // redjacket ??
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>Red jacket for sale</Text>
         <Text style={styles.description}>Size: M. This is a preloved shirt and it has two sets of polo shirts. If interested please contact me...</Text>
         <View style={styles.userContainer}>
           <ListItem
-            image={require("/Users/durga/Desktop/agile/DoneWithIt/app/assets/Jake.jpg")}
+            image={require("../assets/Jake.jpg")}
             title="Jake Peralta"
             subTitle="2 Listings"
           />
