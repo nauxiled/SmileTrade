@@ -1,6 +1,5 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Image, Text } from  'react-native';
-// import { Formik } from 'formik';
+import { ImageBackground, StyleSheet, Image, Button } from  'react-native';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 
@@ -46,6 +45,7 @@ function Login({navigation}) {
                                 textContentType = "password"
                             />
                             <SubmitButton title="Login" onPress={() => navigation.navigate('Home')}/>
+                            <Button title="Go back to Welcome Screen" onPress={() => navigation.navigate('Welcome')}/>
                         </>
                     )}
             </Formik>

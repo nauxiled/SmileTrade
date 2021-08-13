@@ -31,10 +31,10 @@ const validationSchema = Yup.object().shape({
   function AddItem() {
     return (
       <Screen style={styles.container}>
-      <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
-      <View style={styles.menuIcon}>
+      {/* <Image style={styles.logo} source={require('../assets/smileTrade.png')}/> */}
+      {/* <View style={styles.menuIcon}>
       <Feather name="menu" size={30} color="black" />
-        </View>
+        </View> */}
         <AppForm
           initialValues={{
             title: "",
@@ -63,7 +63,6 @@ const validationSchema = Yup.object().shape({
   
   const styles = StyleSheet.create({
     container: {
-      marginTop: 70,
       padding: 20,
       backgroundColor: "#efc7c1",
       flex: 1,

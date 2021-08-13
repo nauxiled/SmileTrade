@@ -60,7 +60,7 @@ function SignUp(props) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Register"/>
+                            <SubmitButton title="Register" onPress={() => navigation.navigate('Login')}/>
                         </>
                     )}
             </Formik>

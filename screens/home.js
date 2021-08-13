@@ -9,9 +9,9 @@ function Home(props) {
         style = {styles.background}
         source= {require('../assets/Beachbackground.png')}>
         <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
-        <View style={styles.menuIcon}>
+        {/* <View style={styles.menuIcon}>
         <Feather name="menu" size={30} color="black" />
-        </View>
+        </View> */}
         <View style={styles.clothingIcon}>
         <RoundButton title="Clothing" ></RoundButton>
         </View>
