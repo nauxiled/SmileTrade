@@ -40,7 +40,6 @@ function Chat(props) {
 
 const styles = StyleSheet.create({
     container: {
-      marginTop: 80,
         backgroundColor: "#efc7c1",
         flex: 1
     },

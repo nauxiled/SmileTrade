@@ -50,7 +50,6 @@ const validationSchema = Yup.object().shape({
   
   const styles = StyleSheet.create({
     container: {
-      marginTop: 70,
       padding: 10,
       backgroundColor: "#efc7c1",
       flex: 1,
