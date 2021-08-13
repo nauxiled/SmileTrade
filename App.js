@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Pressable, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Chat from './screens/chat';
 import { 
   Satisfy_400Regular 
 } from '@expo-google-fonts/satisfy'

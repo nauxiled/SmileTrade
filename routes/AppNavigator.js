@@ -1,7 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../screens/home';
-import Chat from '../screens/chat';
+import Chat from '../screens/Chat';
 import Login from '../screens/Login';
 import AddItem from '../screens/AddItem';
 import EditItem from '../screens/EditItem';
