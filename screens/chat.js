@@ -9,18 +9,18 @@ const initialMessages = [
 {
     id:1,
     title: 'T1',
-    description: "Hey! Is this item still available?",
+    message: "Hey! Is this item still available?",
     image: require("../assets/Jake.jpg")
 },
 {
     id:2,
     title: 'T2',
-    description: "I'm interested in this item. When will you be able to post it?",
+    message: "I'm interested in this item. When will you be able to post it?",
     image: require("../assets/Jake.jpg")
 }
 ]
 
-function Chat(props) {
+function Chat({navigation}) {
   const [messages, setMessages] = useState(initialMessages);
   const [refreshing, setRefreshing] = useState(false);
 
@@ -28,7 +28,7 @@ function Chat(props) {
     // Delete the message from messages
     setMessages(messages.filter((m) => m.id !== message.id));
   };
-
+//console.log("Message selected"
   return (
     <Screen style={styles.container}>
       <FlatList
@@ -37,9 +37,9 @@ function Chat(props) {
         renderItem={({ item }) => (
           <ListItem
             title={item.title}
-            subTitle={item.description}
+            subTitle={item.message}
             image={item.image}
-            onPress={() => console.log("Message selected", item)}
+            onPress={() => navigation.navigate('Messages', {item:item.title})}
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
@@ -52,7 +52,7 @@ function Chat(props) {
             {
               id: 2,
               title: "T2",
-              description: "D2",
+              message: "D2",
               image: require("../assets/Jake.jpg"),
             },
           ]);

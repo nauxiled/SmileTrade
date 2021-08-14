@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from "react-native";
+import { Alert, StyleSheet } from "react-native";
 import * as Yup from "yup"
 
 import AppForm  from '../Components/AppForm';
@@ -21,6 +21,21 @@ const validationSchema = Yup.object().shape({
     { label: "In Progress", value: 1, backgroundColor:'#fc5c65', icon: 'battery-10'},
     { label: "Traded", value: 2, backgroundColor:'#26de81', icon: 'battery' },
   ];
+
+  const _Alert = () =>
+  Alert.alert(
+    "Alert Title",
+    "My Alert Msg",
+    [
+      {
+        text: "Cancel",
+        onPress: () => console.log("Cancel Pressed"),
+  
+      },
+      { text: "OK", onPress: () => console.log("OK Pressed") }
+    ]
+  );
+  
   
   function EditItem() {
     return (
@@ -42,7 +57,7 @@ const validationSchema = Yup.object().shape({
             numberOfLines={3}
             placeholder="Description"
           />
-          <SubmitButton title="Update" />
+          <SubmitButton title="Update" onPress = {_Alert}/>
         </AppForm>
       </Screen>
     );

@@ -11,11 +11,14 @@ import {useFonts} from 'expo-font';
 import Login from './screens/Login';
 import Welcome from './screens/Welcome';
 import Signup from './screens/Signup';
+import Chat from './screens/Chat';
 import { createStackNavigator } from '@react-navigation/stack';
 import AuthNavigator from './routes/AuthNavigation';
 import AppNavigator from './routes/AppNavigator';
 import AddItem from './screens/AddItem';
 import EditItem from './screens/EditItem';
+import ChatStack from './routes/ChatNavigator';
+import Messages from './screens/Messages';
 //const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
@@ -28,7 +31,7 @@ function App() {
 
   else{
     return (
-    //  <Chat/>
+      // <ChatStack/>
       <NavigationContainer>
         <AppNavigator/>
       </NavigationContainer>
