@@ -89,6 +89,7 @@ const Messages = () => {
       renderSend={renderSend}
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
+      
     />
   );
 };
@@ -100,5 +101,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
 });

@@ -12,6 +12,7 @@ const  ChatNavigator = () => (
         headerStyle: {
           backgroundColor:'#efc7c1',
           height:50,  
+          
         },
       }}
       >
