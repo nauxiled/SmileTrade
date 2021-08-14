@@ -39,7 +39,7 @@ function Chat({navigation}) {
             title={item.title}
             subTitle={item.message}
             image={item.image}
-            onPress={() => navigation.navigate('Messages', item)}
+            onPress={() => navigation.navigate('Messages', {item:item.title})}
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}

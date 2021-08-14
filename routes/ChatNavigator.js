@@ -8,7 +8,11 @@ const Stack = createStackNavigator();
 const  ChatNavigator = () => (
     <Stack.Navigator 
       screenOptions={{
-        header: () => null
+        title:null,
+        headerStyle: {
+          backgroundColor:'#efc7c1',
+          height:50,  
+        },
       }}
       >
         <Stack.Screen
@@ -18,6 +22,9 @@ const  ChatNavigator = () => (
         <Stack.Screen
           name="Messages"
           component={Messages}
+          options={({route})=> ({
+            title: route.params.item,
+          })}
         />
       </Stack.Navigator>
 );
