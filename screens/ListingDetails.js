@@ -3,12 +3,13 @@ import { View, Image, StyleSheet, Text } from "react-native";
 import ListItem from "../Components/ListItem";
 
 
-function ListingDetails(props) {
+function ListingDetails({ route }) {
+  const listing = route.params;
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require("redJacket.jpg")} /> // redjacket ??
+      <Image style={styles.image} source={listing.image} /> // redjacket ??
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>Red jacket for sale</Text>
+        <Text style={styles.title}>listing.title</Text>
         <Text style={styles.description}>Size: M. This is a preloved shirt and it has two sets of polo shirts. If interested please contact me...</Text>
         <View style={styles.userContainer}>
           <ListItem

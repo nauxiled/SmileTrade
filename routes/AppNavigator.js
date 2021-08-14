@@ -4,8 +4,9 @@ import Home from '../screens/Home';
 // import Chat from '../screens/Chat';
 import Login from '../screens/Login';
 import AddItem from '../screens/AddItem';
-import EditItem from '../screens/EditItem';
+//import EditItem from '../screens/EditItem';
 import ChatNavigator from './ChatNavigator';
+import EditNavigator from './EditNavigator';
 
 const Drawer = createDrawerNavigator();
 const AppNavigator = () => (
@@ -21,7 +22,7 @@ const AppNavigator = () => (
          <Drawer.Screen name="Home" component={Home}  />
          <Drawer.Screen name="Add Item" component={AddItem} />
          <Drawer.Screen name="Chat" component={ChatNavigator} />
-         <Drawer.Screen name="Edit Item" component={EditItem} />
+         <Drawer.Screen name="History" component={EditNavigator} />
         
  
        </Drawer.Navigator>
