@@ -30,6 +30,13 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+    container: {
+        flex:1,
+        padding:20,
+        backgroundColor: '#F0D7CE',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     background: {
         flex: 1,
         justifyContent: "center",
