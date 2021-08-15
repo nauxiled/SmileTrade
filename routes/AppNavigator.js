@@ -6,11 +6,11 @@ import Login from '../screens/Login';
 import AddItem from '../screens/AddItem';
 //import EditItem from '../screens/EditItem';
 import ChatNavigator from './ChatNavigator';
-<<<<<<< Updated upstream
+
 import EditNavigator from './EditNavigator';
-=======
+
 import HomeNavigator from './HomeNavigator';
->>>>>>> Stashed changes
+
 
 const Drawer = createDrawerNavigator();
 function LogoTitle() {
