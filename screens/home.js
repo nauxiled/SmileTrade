@@ -3,14 +3,14 @@ import { Image, ImageBackground,StyleSheet,View } from 'react-native';
 import { Feather } from '@expo/vector-icons'; 
 import RoundButton from '../Components/RoundButton';
 
-function Home(props) {
+function Home({navigation}) {
     return (
         <ImageBackground 
         style = {styles.background}
         source= {require('../assets/Beachbackground.png')}>
         <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
         <View style={styles.clothingIcon}>
-        <RoundButton title="Clothing" ></RoundButton>
+        <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
         </View>
         <View style={styles.technologyIcon}>
         <RoundButton title="Technology" ></RoundButton>

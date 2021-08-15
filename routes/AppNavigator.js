@@ -6,11 +6,24 @@ import Login from '../screens/Login';
 import AddItem from '../screens/AddItem';
 //import EditItem from '../screens/EditItem';
 import ChatNavigator from './ChatNavigator';
+<<<<<<< Updated upstream
 import EditNavigator from './EditNavigator';
+=======
+import HomeNavigator from './HomeNavigator';
+>>>>>>> Stashed changes
 
 const Drawer = createDrawerNavigator();
-const AppNavigator = () => (
+function LogoTitle() {
+  return (
+    <Image
+      style={{ width: 50, height: 50 }}
+      source={require('../assets/smileTrade.png')}
+    />
+  );
+}
 
+const AppNavigator = () => (
+  
 
     <Drawer.Navigator
          drawerStyle={{
@@ -18,8 +31,13 @@ const AppNavigator = () => (
          screenOptions={{
            headerShown : true,
            
-         }}>
-         <Drawer.Screen name="Home" component={Home}  />
+         }}
+         
+         options={{
+           headerTitle :props =><LogoTitle {...props}/>
+         }}
+         initialRouteName="Home">
+         <Drawer.Screen name="Home" component={HomeNavigator}  />
          <Drawer.Screen name="Add Item" component={AddItem} />
          <Drawer.Screen name="Chat" component={ChatNavigator} />
          <Drawer.Screen name="History" component={EditNavigator} />
