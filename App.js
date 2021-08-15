@@ -32,6 +32,10 @@ function App() {
   else{
     return (
       // <ChatStack/>
+<<<<<<< Updated upstream
+=======
+      // <Trading/>
+>>>>>>> Stashed changes
       <NavigationContainer>
         <AppNavigator/>
       </NavigationContainer>

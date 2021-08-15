@@ -10,15 +10,14 @@ const  ChatNavigator = () => (
       screenOptions={{
         title:null,
         headerStyle: {
-          backgroundColor:'#efc7c1',
-          height:50,  
-          
+          backgroundColor:'transparent', 
         },
       }}
       >
         <Stack.Screen
           name="Chat"
           component={Chat}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Messages"
