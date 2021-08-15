@@ -25,3 +25,5 @@ const  HomeNavigator = () => (
 );
 
 export default HomeNavigator;
+
+//Trading 
