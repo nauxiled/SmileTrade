@@ -39,37 +39,37 @@ const styles = StyleSheet.create({
     clothingIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 200,
+        top: 150,
         left: 40
     },
     technologyIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 200,
+        top: 150,
         right: 40
     },
     accesoriesIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 400,
+        top: 350,
         left: 40
     },
     cardsIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 400,
+        top: 350,
         right: 40,
     },
     decorationIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 600,
+        top: 550,
         left: 40
     },
     stationaryIcon: {
         position: 'absolute',
         borderRadius: 100,
-        top: 600,
+        top: 550,
         right: 40
     },
     background: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         position: 'absolute',
-        top: 50,
+
     }
 })
 
