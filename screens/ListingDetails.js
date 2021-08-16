@@ -7,7 +7,7 @@ function ListingDetails({ route }) {
   const listing = route.params;
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={listing.image} /> // redjacket ??
+      <Image style={styles.image} source={listing.image} /> 
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>listing.title</Text>
         <Text style={styles.description}>Size: M. This is a preloved shirt and it has two sets of polo shirts. If interested please contact me...</Text>

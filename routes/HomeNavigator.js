@@ -7,6 +7,7 @@ import Trading from '../screens/Trading';
 const Stack = createStackNavigator();
 const  HomeNavigator = () => (
     <Stack.Navigator 
+      mode ='modal'
         screenOptions={{
         header: () => null
       }}
@@ -25,3 +26,5 @@ const  HomeNavigator = () => (
 );
 
 export default HomeNavigator;
+
+//Trading 

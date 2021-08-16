@@ -192,25 +192,24 @@ export default class Trading extends React.Component {
   //render method needs to be defined in a React.Component subclass
   render() {
     return (
+   
+   
    <TouchableOpacity onPress={() => Alert.alert('image clicked')}>
 
-      <View>
-        
-        </View>
-        <Text style = {styles.text}> Trading Page </Text> 
-        <View style={{ flex: 1 }}>
+        <View>
           {this.renderItems()}
         </View>
       
-        <View style={{ height: 30 }}>
+        {/* <View style={{ height: 30 }}>
 
-      </View>
+      </View> */}
       </TouchableOpacity>
     
 
     );
   }
 }
+//style={{ flex: 1 }}
 
 const styles = StyleSheet.create({
   container: {
