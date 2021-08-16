@@ -16,7 +16,7 @@ const Messages = () => {
         user: {
           _id: 2,
           name: 'React Native',
-          avatar: 'https://placeimg.com/140/140/any',
+          avatar: '../assets/Jake.jpg',
         },
       },
       {
@@ -26,7 +26,7 @@ const Messages = () => {
         user: {
           _id: 1,
           name: 'React Native',
-          avatar: 'https://placeimg.com/140/140/any',
+          avatar: '../assets/Jake.jpg',
         },
       },
     ]);
