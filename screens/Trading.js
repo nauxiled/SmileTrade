@@ -10,7 +10,7 @@ const appHeight = Dimensions.get('window').height;
  
 const items =[
     {id:"1",uri: require('../assets/redJacket.jpg')},
-    {id:"2",uri: require('../assets/Jake.jpg')},
+    {id:"2",uri: require('../assets/greenShirt.jpeg')},
     {id:"3",uri: require('../assets/white_dress.jpg')},
 ]
 

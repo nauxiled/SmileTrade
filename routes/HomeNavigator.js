@@ -6,8 +6,12 @@ import Trading from '../screens/Trading';
 
 const Stack = createStackNavigator();
 const  HomeNavigator = () => (
+<<<<<<< Updated upstream
     <Stack.Navigator 
       mode ='modal'
+=======
+    <Stack.Navigator mode = "modal"
+>>>>>>> Stashed changes
         screenOptions={{
         header: () => null
       }}
