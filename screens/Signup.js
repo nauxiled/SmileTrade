@@ -1,11 +1,12 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Image, Text } from  'react-native';
+import { ImageBackground, StyleSheet, Image, Button } from  'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
+import AppButton from '../Components/AppButton';
 
 const validationSchema = Yup.object().shape({
     fname: Yup.string().required().label("First Name"),
@@ -14,7 +15,7 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required().min(6).label("Password"),
 })
 
-function SignUp(props) {
+function SignUp({navigation}) {
     return (
         <ImageBackground 
         style = {styles.background}
@@ -60,7 +61,9 @@ function SignUp(props) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Register" onPress={() => navigation.navigate('Login')}/>
+                            <AppButton title="Register" onPress={() => navigation.navigate('Login')}/>
+                            
+                            
                         </>
                     )}
             </Formik>

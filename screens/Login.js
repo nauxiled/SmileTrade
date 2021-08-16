@@ -6,6 +6,7 @@ import { Formik } from 'formik';
 import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
+import AppButton from '../Components/AppButton';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -44,8 +45,7 @@ function Login({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Login" onPress={() => navigation.navigate('Home')}/>
-                            <Button title="Go back to Welcome Screen" onPress={() => navigation.navigate('Welcome')}/>
+                            <AppButton title="Login" onPress={() => navigation.navigate('Home')}/>
                         </>
                     )}
             </Formik>

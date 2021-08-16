@@ -2,8 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../screens/Home';
-import ListingsScreen from '../screens/ListingsScreen';
-import ListingDetails from '../screens/ListingDetails';
+import Trading from '../screens/Trading';
 const Stack = createStackNavigator();
 const  HomeNavigator = () => (
 
@@ -20,17 +19,13 @@ const  HomeNavigator = () => (
           name="Home"
           component={Home}
         />
-        
+
        <Stack.Screen
-          name="ListingsScreen"
-          component={ListingsScreen}
+          name="Trading"
+          component={Trading}
         />
 
-        <Stack.Screen
-          options={{headerShown: true}}
-          name="ListingDetail"
-          component={ListingDetails}
-        />
+        
         
       </Stack.Navigator>
 
