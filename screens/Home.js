@@ -9,7 +9,7 @@ function Home({navigation}) {
         source= {require('../assets/Beachbackground.png')}>
         <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
         <View style={styles.clothingIcon}>
-        <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
+        <RoundButton title="Clothing" onPress={() => navigation.navigate('ListingsScreen')}></RoundButton>
         </View>
         <View style={styles.technologyIcon}>
         <RoundButton title="Technology" ></RoundButton>
