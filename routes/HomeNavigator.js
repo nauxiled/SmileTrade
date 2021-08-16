@@ -27,4 +27,4 @@ const  HomeNavigator = () => (
 
 export default HomeNavigator;
 
-//Trading 
+//Trading Integrate 
