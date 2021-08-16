@@ -1,6 +1,5 @@
 import React from 'react';
 import { Image, ImageBackground,StyleSheet,View } from 'react-native';
-import { Feather } from '@expo/vector-icons'; 
 import RoundButton from '../Components/RoundButton';
 
 function Home({navigation}) {
