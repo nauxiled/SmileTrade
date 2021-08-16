@@ -3,7 +3,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from '../screens/Home';
 import Trading from '../screens/Trading';
-
 const Stack = createStackNavigator();
 const  HomeNavigator = () => (
 
@@ -20,11 +19,18 @@ const  HomeNavigator = () => (
           name="Home"
           component={Home}
         />
-        <Stack.Screen
+
+       <Stack.Screen
           name="Trading"
           component={Trading}
         />
+
+        
+        
       </Stack.Navigator>
+
+         
+    
 );
 
 export default HomeNavigator;
