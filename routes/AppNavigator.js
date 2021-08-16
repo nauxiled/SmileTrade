@@ -9,7 +9,7 @@ import EditNavigator from './EditNavigator';
 
 import HomeNavigator from './HomeNavigator';
 import SignUp from '../screens/Signup';
-
+import Login from '../screens/Login';
 
 const Drawer = createDrawerNavigator();
 function LogoTitle() {
