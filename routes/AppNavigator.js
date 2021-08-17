@@ -10,6 +10,7 @@ import EditNavigator from './EditNavigator';
 import HomeNavigator from './HomeNavigator';
 import SignUp from '../screens/Signup';
 import Login from '../screens/Login';
+import AuthNavigator from './AuthNavigation';
 
 const Drawer = createDrawerNavigator();
 function LogoTitle() {
@@ -40,7 +41,7 @@ const AppNavigator = () => (
          <Drawer.Screen name="Add Item" component={AddItem} />
          <Drawer.Screen name="Chat" component={ChatNavigator} />
          <Drawer.Screen name="History" component={EditNavigator} />
-         <Drawer.Screen name="LogOut " component={Login}/>
+         <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/>
         
  
        </Drawer.Navigator>
