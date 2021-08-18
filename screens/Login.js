@@ -13,6 +13,7 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required().min(6).label("Password"),
 })
 
+
 function Login({navigation}) {
     return (
         <ImageBackground 
