@@ -20,7 +20,7 @@ const listings = [
   },
 ];
 
-function TradeHistory({ navigation }) {
+function ListItem({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TradeHistory;
+export default ListItem;
