@@ -13,8 +13,19 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required().min(6).label("Password"),
 })
 
+async function handleOnLogin(values) {
+    const { email, password } = values;
+
+    try {
+      await loginWithEmail(email, password);
+    } catch (error) {
+      setLoginError(error.message);
+    }
+  }
+
 
 function Login({navigation}) {
+
     return (
         <ImageBackground 
         style = {styles.background}
@@ -23,7 +34,8 @@ function Login({navigation}) {
         <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
             <Formik
                 initialValues = {{ email: '', password: '' }}
-                onSubmit={values => console.log(values)}
+                // onSubmit={values => console.log(values)}
+                onSubmit={values => handleOnLogin(values)}
                 validationSchema = {validationSchema}
                 >
                     { () => (
@@ -46,7 +58,7 @@ function Login({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <AppButton title="Login" onPress={() => navigation.navigate('Home')}/>
+                            <SubmitButton title="Login" onPress={() => navigation.navigate('Home')}/>
                         </>
                     )}
             </Formik>
