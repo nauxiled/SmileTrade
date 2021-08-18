@@ -150,7 +150,9 @@ export default class Trading extends React.Component {
      
             <Image
               style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 20 }}
-              source={item.uri} />
+              source={item.uri} 
+              onPress = {() => navigation.navigate('ListingDetailsScreen')}/>
+              
           
 
           </Animated.View>
