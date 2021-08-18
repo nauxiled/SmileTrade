@@ -32,7 +32,7 @@ function ListItem({ navigation }) {
             title={item.title}
             subTitle={item.status}
             image={item.image}
-            onPress = {() => navigation.navigate('EditItem', item)}
+            onPress = {() => navigation.navigate('ListingDetailsScreen', item)}
           />
         )}
       />
