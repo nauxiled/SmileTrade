@@ -39,4 +39,4 @@ const Firebase ={
   },
 }
 
-export default firebase;
+export default Firebase;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { ImageBackground, StyleSheet, Image, Button } from  'react-native';
+import React,{ useState} from 'react';
+import { ImageBackground, StyleSheet, Image } from  'react-native';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 
@@ -7,24 +7,30 @@ import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
 import AppButton from '../Components/AppButton';
+import {loginWithEmail} from '../firebase/firebase';
+import ErrorMessage from '../Components/ErrorMessage';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
     password: Yup.string().required().min(6).label("Password"),
 })
 
-async function handleOnLogin(values) {
-    const { email, password } = values;
 
-    try {
-      await loginWithEmail(email, password);
-    } catch (error) {
-      setLoginError(error.message);
-    }
-  }
 
 
 function Login({navigation}) {
+
+    const [loginError, setLoginError] = useState('');
+        async function handleOnLogin(values) {
+            const { email, password } = values;
+        
+            try {
+            await loginWithEmail(email, password);
+            console.log("Can go in")
+            } catch (error) {
+            setLoginError(error.message);
+            }
+        }
 
     return (
         <ImageBackground 
@@ -58,7 +64,9 @@ function Login({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Login" onPress={() => navigation.navigate('Home')}/>
+                            <SubmitButton title="Login"/>
+                            <ErrorMessage error={loginError} visible={true} />
+
                         </>
                     )}
             </Formik>
