@@ -1,4 +1,7 @@
 import * as firebase from 'firebase';
+import 'firebase/auth';
+import 'firebase/firestore'
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyD3Ers2fpZuN8TGBwsBwsCCe0h0yrW_RNE",
@@ -14,6 +17,26 @@ const firebaseConfig = {
     firebase.initializeApp(firebaseConfig);
 }
 
-
+const Firebase ={
+  loginWithEmail :(email, password) =>{
+    return firebase.auth().signInWithEmailAndPasssword(email, password)
+  },
+  signupWithEmail :(email,password) =>{
+    return firebase.auth().createUserWithEmailAndPassword(email, password)
+  },
+  signOut:() =>{
+    return firebase.auth().signOut()
+  },
+  checkUserAuth:user =>{
+    return firebase.auth().onAuthStateChanged(user)
+  },
+  createNewUser:userData =>{
+    return firebase
+    .firestore()
+    .collection('users')
+    .doc('${userData.uid}')
+    .set(userData)
+  },
+}
 
 export default firebase;
