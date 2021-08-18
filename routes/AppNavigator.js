@@ -8,9 +8,10 @@ import ChatNavigator from './ChatNavigator';
 import EditNavigator from './EditNavigator';
 
 import HomeNavigator from './HomeNavigator';
-<<<<<<< HEAD
+
 import ListNavigator from './ListNavigator';
 
+import AuthNavigator from './AuthNavigation';
 
 const Drawer = createDrawerNavigator();
 function LogoTitle() {
@@ -41,11 +42,10 @@ const AppNavigator = () => (
          <Drawer.Screen name="Add Item" component={AddItem} />
          <Drawer.Screen name="Chat" component={ChatNavigator} />
          <Drawer.Screen name="History" component={EditNavigator} />
-<<<<<<< HEAD
+
          <Drawer.Screen name="List" component={ListNavigator} />
-=======
          <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/>
->>>>>>> 35ada2ba9b01ab7c0061e8b13114d45c13cff19e
+
         
  
        </Drawer.Navigator>
