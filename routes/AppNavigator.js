@@ -11,11 +11,6 @@ import HomeNavigator from './HomeNavigator';
 <<<<<<< HEAD
 import ListNavigator from './ListNavigator';
 
-=======
-import SignUp from '../screens/Signup';
-import Login from '../screens/Login';
-import AuthNavigator from './AuthNavigation';
->>>>>>> 35ada2ba9b01ab7c0061e8b13114d45c13cff19e
 
 const Drawer = createDrawerNavigator();
 function LogoTitle() {
