@@ -25,7 +25,8 @@ function SignUp({navigation}) {
             const { email, password } = values;
             try {
             await registerWithEmail(email, password);
-
+            console.log("Registered");
+            alert("Registered, Slide the page to go back to the Welcome Screen");
             } catch (error) {
             setRegisterError(error.message);
             }
