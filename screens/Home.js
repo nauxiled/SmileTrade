@@ -1,12 +1,22 @@
 import React from 'react';
-import { Image, ImageBackground,StyleSheet,View } from 'react-native';
+import { Image, ImageBackground,StyleSheet,View,ScrollView } from 'react-native';
 import RoundButton from '../Components/RoundButton';
-
+import AppButton from '../Components/AppButton';
+import { logout } from '../firebase/firebase';
 function Home({navigation}) {
+    async function handleSignOut() {
+        try {
+          await logout();
+        } catch (error) {
+          console.log(error);
+        }
+      }
     return (
+       
         <ImageBackground 
         style = {styles.background}
         source= {require('../assets/Beachbackground.png')}>
+   
         <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
         <View style={styles.clothingIcon}>
         <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
@@ -25,8 +35,10 @@ function Home({navigation}) {
         </View>
         <View style={styles.stationaryIcon}>
         <RoundButton title="Stationary" ></RoundButton>
+        <AppButton title="Log Out" onPress={handleSignOut}/>
         </View>
         </ImageBackground>
+       
     );
 }
 

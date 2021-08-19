@@ -39,44 +39,6 @@ function App() {
       //   <AuthNavigator/>
       // </NavigationContainer>
     );
-
-    //   <NavigationContainer>
-    //   <Stack.Navigator 
-    //   screenOptions={{
-    //     header: () => null
-    //   }}
-    //   >
-    //     <Stack.Screen
-    //       name="Login"
-    //       component={Login}
-    //     />
-    //     <Stack.Screen
-    //       name="Signup"
-    //       component={Signup}
-    //     />
-    //     <Stack.Screen
-    //       name="Home"
-    //       component={Home}
-    //     />
-    //   </Stack.Navigator>
-      
-    // </NavigationContainer>
-      
-  //     <NavigationContainer>
-  //      <Drawer.Navigator
-  //        drawerStyle={{
-  //          backgroundColor: '#CEE7F0'}}
-  //        screenOptions={{
-  //          headerShown : true,
-           
-  //        }}>
-  //        <Drawer.Screen name="Home" component={Home}  />
-  //        <Drawer.Screen name="About" component={About} />
-  //        <Drawer.Screen name="Chat" component={Chat} />
- 
-  //      </Drawer.Navigator>
-  //    </NavigationContainer>
-  //  );
    
 }
  
