@@ -22,11 +22,13 @@ function Login({navigation}) {
 
     const [loginError, setLoginError] = useState('');
     
+    
         async function handleOnLogin(values) {
             const { email, password } = values;
         
             try {
             await loginWithEmail(values);
+            console.log(email)
             
             } catch (error) {
             setLoginError(error.message);

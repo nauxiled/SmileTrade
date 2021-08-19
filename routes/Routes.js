@@ -17,6 +17,7 @@ export default function Routes() {
           try {
             await (authUser ? setUser(authUser) : setUser(null));
             setIsLoading(false);
+            console.log(setUser)
           } catch (error) {
             console.log(error);
           }
