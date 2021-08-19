@@ -26,8 +26,7 @@ function Login({navigation}) {
             const { email, password } = values;
         
             try {
-            await loginWithEmail(email, password);
-            console.log("Can go in")
+            await loginWithEmail(values);
             } catch (error) {
             setLoginError(error.message);
             }

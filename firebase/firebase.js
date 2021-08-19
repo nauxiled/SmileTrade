@@ -18,9 +18,16 @@ import firebaseConfig from './firebaseConfig';
 }
 
 export const auth = firebase.auth();
-export const loginWithEmail =(email,password)=>
-  auth.signInWithEmailAndPasssword(email,password);
-
+export const loginWithEmail = ({email, password,navigation}) => {
+  return auth.signInWithEmailAndPassword(email, password)
+    .then(() => {
+      console.log('Successfully signed in.');
+    })
+    .catch(error => {
+      alert(error);
+      console.log(error);
+    });
+};
 export const registerWithEmail = (email, password) =>
   auth.createUserWithEmailAndPassword(email, password);
 
