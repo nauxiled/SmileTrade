@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { ImageBackground, StyleSheet, Image, Button } from  'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -7,6 +7,8 @@ import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
 import AppButton from '../Components/AppButton';
+import {registerWithEmail} from '../firebase/firebase';
+import ErrorMessage from '../Components/ErrorMessage';
 
 const validationSchema = Yup.object().shape({
     fname: Yup.string().required().label("First Name"),
@@ -15,7 +17,20 @@ const validationSchema = Yup.object().shape({
     password: Yup.string().required().min(6).label("Password"),
 })
 
+
+
 function SignUp({navigation}) {
+    const [registerError, setRegisterError] = useState('');
+        async function handleOnSignUp(values, actions) {
+            const { email, password } = values;
+            try {
+            await registerWithEmail(email, password);
+
+            } catch (error) {
+            setRegisterError(error.message);
+            }
+        }
+
     return (
         <ImageBackground 
         style = {styles.background}
@@ -24,7 +39,7 @@ function SignUp({navigation}) {
         <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
             <Formik
                 initialValues = {{ fname: '',lname: '', email: '', password: '' }}
-                onSubmit={values => console.log(values)}
+                onSubmit={values => handleOnSignUp(values)}
                 validationSchema = {validationSchema}
                 >
                     { () => (
@@ -61,8 +76,8 @@ function SignUp({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <AppButton title="Register" onPress={() => navigation.navigate('Login')}/>
-                            
+                            <SubmitButton title="Register" />
+                            {<ErrorMessage error={registerError} visible={true} />}
                             
                         </>
                     )}

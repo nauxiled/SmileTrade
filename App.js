@@ -19,6 +19,8 @@ import AddItem from './screens/AddItem';
 import EditItem from './screens/EditItem';
 import ChatStack from './routes/ChatNavigator';
 import Messages from './screens/Messages';
+import Providers from './routes';
+
 //const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
@@ -31,10 +33,11 @@ function App() {
 
   else{
     return (
-      // <ChatStack/>
-      <NavigationContainer>
-        <AppNavigator/>
-      </NavigationContainer>
+      <Providers />
+      // // <ChatStack/>
+      // <NavigationContainer>
+      //   <AuthNavigator/>
+      // </NavigationContainer>
     );
 
     //   <NavigationContainer>
