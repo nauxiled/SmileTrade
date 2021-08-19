@@ -32,7 +32,7 @@ export default function Routes() {
     
       return (
         <NavigationContainer>
-          {user ? <AppNavigator /> : <AuthNavigator />}
+          {user ? <AuthNavigator /> : <AppNavigator />}
         </NavigationContainer>
       );
 }
