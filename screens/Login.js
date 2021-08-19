@@ -21,6 +21,7 @@ const validationSchema = Yup.object().shape({
 function Login({navigation}) {
 
     const [loginError, setLoginError] = useState('');
+    
         async function handleOnLogin(values) {
             const { email, password } = values;
         
@@ -41,8 +42,9 @@ function Login({navigation}) {
             <Formik
                 initialValues = {{ email: '', password: '' }}
                 // onSubmit={values => console.log(values)}
-                onSubmit={values => handleOnLogin(values)}
+             
                 validationSchema = {validationSchema}
+                onSubmit={values => handleOnLogin(values)}
                 >
                     { () => (
                         <>

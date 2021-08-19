@@ -37,6 +37,3 @@ export default function Routes() {
       );
 }
     
-// Backend - eva branch 
-// New backend branch 
-// Backend eva brnach 
