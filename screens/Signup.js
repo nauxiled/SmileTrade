@@ -7,7 +7,7 @@ import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
 import AppButton from '../Components/AppButton';
-import {signupWithEmail} from '../firebase/firebase';
+import {registerWithEmail} from '../firebase/firebase';
 import ErrorMessage from '../Components/ErrorMessage';
 
 const validationSchema = Yup.object().shape({
@@ -24,7 +24,7 @@ function SignUp({navigation}) {
         async function handleOnSignUp(values, actions) {
             const { email, password } = values;
             try {
-            await signupWithEmail(email, password);
+            await registerWithEmail(email, password);
 
             } catch (error) {
             setRegisterError(error.message);
@@ -76,7 +76,7 @@ function SignUp({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Register" onPress={() => navigation.navigate('Login')}/>
+                            <SubmitButton title="Register" />
                             {<ErrorMessage error={registerError} visible={true} />}
                             
                         </>

@@ -25,10 +25,10 @@ const AuthNavigator = () => (
           name="Signup"
           component={Signup}
         />
-         <Stack.Screen
+         {/* <Stack.Screen
           name="Home"
           component={AppNavigator}
-        />
+        /> */}
       </Stack.Navigator>
 );
 

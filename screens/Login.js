@@ -64,8 +64,10 @@ function Login({navigation}) {
                                 secureTextEntry
                                 textContentType = "password"
                             />
-                            <SubmitButton title="Login"/>
                             <ErrorMessage error={loginError} visible={true} />
+                            <SubmitButton title="Login" />
+                            <AppButton title="Go back to the Welcome Screen"  onPress={() => navigation.navigate('Welcome')}/>
+                            
 
                         </>
                     )}
