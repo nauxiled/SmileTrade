@@ -43,7 +43,7 @@ export default function AppNavigator () {
     <Drawer.Screen name="History" component={EditNavigator} />
 
     <Drawer.Screen name="List" component={ListNavigator} />
-    <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/>
+    {/* <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/> */}
 
    
 
