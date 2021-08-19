@@ -10,9 +10,9 @@ import Spinner from '../Components/Spinner';
 
 export default function Routes() {
     const {user,setUser} = useContext(AuthUserContext);
-   const [isLoading,setIsLoading] = useState(true);
+    const [isLoading,setIsLoading] = useState(true);
     useEffect(() => {
-        // onAuthStateChanged returns an unsubscriber
+
         const unsubscribeAuth = auth.onAuthStateChanged(async authUser => {
           try {
             await (authUser ? setUser(authUser) : setUser(null));
@@ -22,7 +22,7 @@ export default function Routes() {
           }
         });
     
-        // unsubscribe auth listener on unmount
+      
         return unsubscribeAuth;
       }, []);
     
@@ -32,8 +32,8 @@ export default function Routes() {
     
       return (
         <NavigationContainer>
-          {user ? <AuthNavigator /> : <AppNavigator />}
-        </NavigationContainer>
+          {user ? <AppNavigator /> : <AuthNavigator />}
+       </NavigationContainer>
       );
 }
     

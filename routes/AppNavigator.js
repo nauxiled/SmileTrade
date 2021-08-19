@@ -23,34 +23,37 @@ function LogoTitle() {
   );
 }
 
-const AppNavigator = () => (
+export default function AppNavigator () {
+  return(
+    <Drawer.Navigator
+    drawerStyle={{
+      backgroundColor: '#CEE7F0'}}
+    screenOptions={{
+      headerShown : true,
+      
+    }}
+    
+    options={{
+      headerTitle :props =><LogoTitle {...props}/>
+    }}
+    initialRouteName="Home">
+    <Drawer.Screen name="Home" component={HomeNavigator}  />
+    <Drawer.Screen name="Add Item" component={AddItem} />
+    <Drawer.Screen name="Chat" component={ChatNavigator} />
+    <Drawer.Screen name="History" component={EditNavigator} />
+
+    <Drawer.Screen name="List" component={ListNavigator} />
+    {/* <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/> */}
+
+   
+
+  </Drawer.Navigator>
+  );
+} 
   
 
-    <Drawer.Navigator
-         drawerStyle={{
-           backgroundColor: '#CEE7F0'}}
-         screenOptions={{
-           headerShown : true,
-           
-         }}
-         
-         options={{
-           headerTitle :props =><LogoTitle {...props}/>
-         }}
-         initialRouteName="Home">
-         <Drawer.Screen name="Home" component={HomeNavigator}  />
-         <Drawer.Screen name="Add Item" component={AddItem} />
-         <Drawer.Screen name="Chat" component={ChatNavigator} />
-         <Drawer.Screen name="History" component={EditNavigator} />
-
-         <Drawer.Screen name="List" component={ListNavigator} />
-         <Drawer.Screen name="LogOut " component={AuthNavigator} options={{headerShown: false}}/>
-
-        
- 
-       </Drawer.Navigator>
-);
+   
 
 
-export default AppNavigator;
-// EditItem navigatotr
+
+

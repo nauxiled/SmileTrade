@@ -27,6 +27,7 @@ function Login({navigation}) {
         
             try {
             await loginWithEmail(values);
+            
             } catch (error) {
             setLoginError(error.message);
             }

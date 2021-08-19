@@ -4,10 +4,12 @@ import {createStackNavigator} from "@react-navigation/stack";
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import Welcome from '../screens/Welcome';
-import AppNavigator from './AppNavigator';
+
 
 const Stack = createStackNavigator();
-const AuthNavigator = () => (
+export default function AuthNavigator ()
+{
+  return(
     <Stack.Navigator 
       screenOptions={{
         header: () => null
@@ -25,11 +27,11 @@ const AuthNavigator = () => (
           name="Signup"
           component={Signup}
         />
-         <Stack.Screen
+         {/* <Stack.Screen
           name="Home"
           component={AppNavigator}
-        />
+        /> */}
       </Stack.Navigator>
 );
+      }
 
-export default AuthNavigator;

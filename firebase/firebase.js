@@ -18,10 +18,11 @@ import firebaseConfig from './firebaseConfig';
 }
 
 export const auth = firebase.auth();
-export const loginWithEmail = ({email, password,navigation}) => {
+export const loginWithEmail = ({email, password}) => {
   return auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       console.log('Successfully signed in.');
+      console.log (email)
     })
     .catch(error => {
       alert(error);
