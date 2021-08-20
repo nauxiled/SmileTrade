@@ -25,18 +25,18 @@ export const loginWithEmail = ({email, password}) => {
       console.log(error);
     });
 };
-// export const registerWithEmail = (email, password) =>
-//   auth.createUserWithEmailAndPassword(email, password);
-export const registerWithEmail = ({email, password}) =>{
-  return auth.createUserWithEmailAndPassword(email, password)
-  .then(() => {
-    console.log('Registered');
-  })
-  .catch(error => {
-    alert(error);
-    console.log(error);
-  });
-}
+export const registerWithEmail = (email, password) =>
+  auth.createUserWithEmailAndPassword(email, password);
+// export const registerWithEmail = ({email, password}) =>{
+//   return auth.createUserWithEmailAndPassword(email, password)
+//   .then(() => {
+//     console.log('Registered');
+//   })
+//   .catch(error => {
+//     alert(error);
+//     console.log(error);
+//   });
+// }
   
 
 export const logout = () => auth.signOut();

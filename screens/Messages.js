@@ -3,28 +3,29 @@ import {View, StyleSheet} from 'react-native';
 import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import auth from '../firebase/firebase'
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
     setMessages([
+      // {
+      //   _id: 1,// To 
+      //   text: 'Yes it is!',
+      //   createdAt: new Date(),
+      //   user: {
+      //     _id: auth?.currentUser?.email,// From
+      //     // name: 'React Native',
+      //     avatar: '../assets/Jake.jpg',
+      //   },
+      // },
       {
-        _id: 2,
-        text: 'Yes it is!',
-        createdAt: new Date(),
-        user: {
-          _id: 2,
-          // name: 'React Native',
-          avatar: '../assets/Jake.jpg',
-        },
-      },
-      {
-        _id: 1,
+        _id: auth?.currentUser?.email ,// To 
         text: 'Hey is this item available?',
         createdAt: new Date(),
         user: {
-          _id: 1,
+          _id: 1,// From
           // name: 'React Native',
           avatar: '../assets/Jake.jpg',
         },
@@ -59,8 +60,12 @@ const Messages = () => {
         {...props}
         wrapperStyle={{
           right: {
-            backgroundColor: '#2e64e5',
+            backgroundColor: '#B22222',
           },
+          left: {
+            backgroundColor: '#ADD8E6',
+          
+          }
         }}
         textStyle={{
           right: {
@@ -89,7 +94,7 @@ const Messages = () => {
       renderSend={renderSend}
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
-      
+      backgroundImage
     />
   );
 };

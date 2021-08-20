@@ -9,13 +9,13 @@ const initialMessages = [
 {
     id:1,
     title: 'T1',
-    message: "Yes it is ",
+    message: "Hey is this available? ",
     image: require("../assets/Jake.jpg")
 },
 {
     id:2,
     title: 'T2',
-    message: "I'm interested in this item. When will you be able to post it?",
+    message: "Hey is this available ?",
     image: require("../assets/Jake.jpg")
 }
 ]
