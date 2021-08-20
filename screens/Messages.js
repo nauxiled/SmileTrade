@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect, useCallback, useLayoutEffect} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -82,7 +82,7 @@ const Messages = () => {
       messages={messages}
       onSend={(messages) => onSend(messages)}
       user={{
-        _id: 1,
+        _id: auth?.currentUser?.email,
       }}
       renderBubble={renderBubble}
       alwaysShowSend

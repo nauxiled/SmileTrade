@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
 require('firebase/auth')
 import firebaseConfig from './firebaseConfig';
+import 'firebase/firestore';
 
 
 // const firebaseConfig = {
@@ -12,10 +13,13 @@ import firebaseConfig from './firebaseConfig';
 //     appId: "1:195887314625:web:40766670dc43412ba60640",
 //     measurementId: "G-TY4GQGSKXZ"
 //   };
-
+let app;
   if(!firebase.apps.length){
-    firebase.initializeApp(firebaseConfig);
-}
+   app = firebase.initializeApp(firebaseConfig);
+  }
+  else{
+    app = firebase.app();
+  }
 
 export const auth = firebase.auth();
 export const loginWithEmail = ({email, password}) => {
@@ -29,10 +33,23 @@ export const loginWithEmail = ({email, password}) => {
       console.log(error);
     });
 };
-export const registerWithEmail = (email, password) =>
-  auth.createUserWithEmailAndPassword(email, password);
+// export const registerWithEmail = (email, password) =>
+//   auth.createUserWithEmailAndPassword(email, password);
+export const registerWithEmail = ({email, password}) =>{
+  return auth.createUserWithEmailAndPassword(email, password)
+  .then(() => {
+    console.log('Registered');
+  })
+  .catch(error => {
+    alert(error);
+    console.log(error);
+  });
+}
+  
 
 export const logout = () => auth.signOut();
+
+export const db = app.firestore();
 
 
 // const Firebase ={

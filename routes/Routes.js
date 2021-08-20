@@ -16,8 +16,7 @@ export default function Routes() {
         const unsubscribeAuth = auth.onAuthStateChanged(async authUser => {
           try {
             await (authUser ? setUser(authUser) : setUser(null));
-            setIsLoading(false);
-            console.log(setUser)
+            setIsLoading(false)
           } catch (error) {
             console.log(error);
           }
