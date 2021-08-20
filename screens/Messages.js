@@ -10,22 +10,22 @@ const Messages = () => {
   useEffect(() => {
     setMessages([
       {
-        _id: 1,
-        text: 'Hello developer',
+        _id: 2,
+        text: 'Yes it is!',
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'React Native',
+          // name: 'React Native',
           avatar: '../assets/Jake.jpg',
         },
       },
       {
-        _id: 2,
-        text: 'Hello world',
+        _id: 1,
+        text: 'Hey is this item available?',
         createdAt: new Date(),
         user: {
           _id: 1,
-          name: 'React Native',
+          // name: 'React Native',
           avatar: '../assets/Jake.jpg',
         },
       },

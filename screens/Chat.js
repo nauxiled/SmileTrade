@@ -9,7 +9,7 @@ const initialMessages = [
 {
     id:1,
     title: 'T1',
-    message: "Hey! Is this item still available?",
+    message: "Yes it is ",
     image: require("../assets/Jake.jpg")
 },
 {
