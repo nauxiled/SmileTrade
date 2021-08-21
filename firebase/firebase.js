@@ -4,7 +4,6 @@ import firebaseConfig from './firebaseConfig';
 import 'firebase/firestore';
 
 
-
 let app;
   if(!firebase.apps.length){
    app = firebase.initializeApp(firebaseConfig);

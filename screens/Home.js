@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ImageBackground,StyleSheet,View,ScrollView } from 'react-native';
+import { Image, ImageBackground,StyleSheet,View } from 'react-native';
 import RoundButton from '../Components/RoundButton';
 import AppButton from '../Components/AppButton';
 import { logout } from '../firebase/firebase';
@@ -44,11 +44,11 @@ function Home({navigation}) {
 }
 
 const styles = StyleSheet.create({
-    menuIcon: {
-        position: 'absolute',
-        top: 80,
-        left: 30
-    },
+    // menuIcon: {
+    //     position: 'absolute',
+    //     top: 80,
+    //     left: 30
+    // },
     clothingIcon: {
         position: 'absolute',
         borderRadius: 100,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         right: 40
     },
     background: {
-        flex: 1,
+        flex:1,
         alignItems: "center",
     },
     logo: {
