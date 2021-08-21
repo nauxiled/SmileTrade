@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import auth from '../firebase/firebase'
+import auth, { db } from '../firebase/firebase'
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
@@ -21,22 +21,23 @@ const Messages = () => {
       //   },
       // },
       {
-        _id: auth?.currentUser?.email ,// To 
+        _id: 1 ,// To 
         text: 'Hey is this item available?',
         createdAt: new Date(),
         user: {
-          _id: 1,// From
+          _id: 2 ,// From
           // name: 'React Native',
-          avatar: '../assets/Jake.jpg',
+          // avatar: '../assets/Jake.jpg',
         },
       },
     ]);
   }, []);
+  
 
   const onSend = useCallback((messages = []) => {
-    setMessages((previousMessages) =>
-      GiftedChat.append(previousMessages, messages),
-    );
+    setMessages((previousMessages) =>GiftedChat.
+    append(previousMessages, messages))
+    
   }, []);
 
   const renderSend = (props) => {

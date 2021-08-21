@@ -11,13 +11,15 @@ function Home({navigation}) {
           console.log(error);
         }
       }
+
+      //INTEGRATE DURGA PART 
     return (
-       
+
         <ImageBackground 
         style = {styles.background}
         source= {require('../assets/Beachbackground.png')}>
-   
         <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
+ 
         <View style={styles.clothingIcon}>
         <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
         </View>
@@ -37,8 +39,7 @@ function Home({navigation}) {
         <RoundButton title="Stationary" ></RoundButton>
         <AppButton title="Log Out" onPress={handleSignOut}/>
         </View>
-        </ImageBackground>
-       
+        </ImageBackground>      
     );
 }
 
