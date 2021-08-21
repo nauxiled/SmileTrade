@@ -1,227 +1,240 @@
 import React from 'react';
-import {View, Text,StyleSheet,Dimensions,Image,Animated,PanResponder, TouchableOpacity, Alert} from 'react-native';
-import { globalStyles } from '../styles/global';
+import {Image,StatusBar,StyleSheet,Text,View,SafeAreaView,Dimensions,Button
+} from 'react-native';
+
+import data from '../Components/Data'
+import Swiper from 'react-native-deck-swiper';
+import { Transitioning, Transition } from 'react-native-reanimated';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
+const { width } = Dimensions.get('window');
 
-//get method of Dimensions component. Getting application's window width and height.
-const appWidth = Dimensions.get('window').width;
-const appHeight = Dimensions.get('window').height;
- 
-const items =[
-    {id:"1",uri: require('../assets/redJacket.jpg')},
-    {id:"2",uri: require('../assets/greenShirt.jpeg')},
-    {id:"3",uri: require('../assets/white_dress.jpg')},
-]
+const stackSize = 4;
+const ANIMATION_DURATION = 200;
+ // the trading animation 
+const transition = (
+  <Transition.Sequence>
+    <Transition.Out
+      type='slide-bottom'
+      durationMs={ANIMATION_DURATION}
+      interpolation='easeIn'
+    />
+    <Transition.Together>
+      <Transition.In
+        type='fade'
+        durationMs={ANIMATION_DURATION}
+        delayMs={ANIMATION_DURATION / 2}
+      />
+      <Transition.In
+        type='slide-bottom'
+        durationMs={ANIMATION_DURATION}
+        delayMs={ANIMATION_DURATION / 2}
+        interpolation='easeOut'
+      />
+    </Transition.Together>
+  </Transition.Sequence>
+);
 
-//to define components as classes or functions, thereby offering more features. done by extending React.component
-export default class Trading extends React.Component {
+const swiperRef = React.createRef();
+const transitionRef = React.createRef();
+// the card 
+const Card = ({ card }) => {
+  return (
+    <View style={styles.card}>
+      <Image source={card.image} style={styles.cardImage} />
+    </View>
+  );
+};
+//the card details
+const CardDetails = ({ index }) => (
+  <View key={data[index].id} style={{ alignItems: 'center' }}>
+    <Text style={[styles.text, styles.heading]} numberOfLines={2}>
+      {data[index].name}
+    </Text>
+    <Text style={[styles.text, styles.price]}>{data[index].description}</Text>
+  </View>
+);
+// looping the cards
+export default function Trading({navigation}) {
+  const [index, setIndex] = React.useState(0);
+  const onSwiped = () => {
+    transitionRef.current.animateNextTransition();
+    setIndex((index + 1) % data.length);
+  };
+
+  return (
+    // The trading card that shows the picture 
+    <SafeAreaView style={styles.container}>
+     
+      <Text style ={styles.text,{textAlign:'center', paddingTop :20, paddingBottom :0}}>
+        Pull Down To Go back Home Page 
+      </Text>
     
-  //constructor is called before the component is mounted.
-  constructor() {
-      //call super(props) before any other statement. Otherwise, this.prop will be undefined in the constructor, leading to bugs
-      super()
-      
-      //ValueXY is a Value function of Animated library
-    this.position = new Animated.ValueXY()
-    //state variable currentItemIndex for tracking current index of array
-    this.state = {
-      currentItemIndex: 0
-    }
+    
+      {/* <MaterialCommunityIcons.Button 
+      name="home-circle-outline" 
+      size={50}
+      backgroundColor='transparent'
+      underlayColor='black'
+      onPress={() => navigation.navigate('Home')}
+      /> */}
+      <MaterialCommunityIcons
+        name='crop-square'
+        size={width}
+        color={'#26de81'}
+        style={{
+          opacity: 0.05,
+          transform: [{ rotate: '45deg' }, { scale: 1.6 }],
+          position: 'absolute',
+          left: -15,
+          top: 30
+        }}
+      />
+      <StatusBar hidden={true} />
+      <View style={styles.swiperContainer}>
+        <Swiper
+          ref={swiperRef}
+          cards={data}
+          cardIndex={index}
+          renderCard={card => <Card card={card} />}
+          infinite
+          backgroundColor={'transparent'}
+          onSwiped={onSwiped}
+          onTapCard={() => swiperRef.current.swipeLeft()}
+          cardVerticalMargin={50}
+          stackSize={stackSize}
+          stackScale={10}
+          stackSeparation={14}
+          animateOverlayLabelsOpacity
+          animateCardOpacity
+          disableTopSwipe
+          disableBottomSwipe
+          overlayLabels={{
+            left: {
+              title: 'PASS',
+              style: {
+                label: {
+                  backgroundColor: '#fc5c65',
+                  borderColor: '#fc5c65',
+                  color: 'white',
+                  borderWidth: 1,
+                  fontSize: 24
+                },
+                wrapper: {
+                  flexDirection: 'column',
+                  alignItems: 'flex-end',
+                  justifyContent: 'flex-start',
+                  marginTop: 20,
+                  marginLeft: -20
+                }
+              }
+            },
+            right: {
+              title: 'LIKE',
+              style: {
+                label: {
+                  backgroundColor: '#26de81',
+                  borderColor: '#26de81',
+                  color: 'white',
+                  borderWidth: 1,
+                  fontSize: 24
+                },
+                wrapper: {
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  justifyContent: 'flex-start',
+                  marginTop: 20,
+                  marginLeft: 20
+                }
+              }
+            }
+          }}
+        />
+      </View>
+      <View style={styles.bottomContainer}>
+        <Transitioning.View
+          ref={transitionRef}
+          transition={transition}
 
-    this.rotate = this.position.x.interpolate({
-      inputRange: [-appWidth / 4, 0, appWidth / 4],
-      outputRange: ['-40deg', '0deg', '40deg'],
-      extrapolate: 'clamp'
-    })
+style={styles.bottomContainerMeta}
+        >
+          <CardDetails index={index} />
+        </Transitioning.View>
 
-    this.rotateAndTranslate = {
-      transform: [{
-        rotate: this.rotate
-      },
-      ...this.position.getTranslateTransform()
-      ]
-    }
-
-    this.likeItemOpacity = this.position.x.interpolate({
-      inputRange: [-appWidth / 4, 0, appWidth / 4],
-      outputRange: [0, 0, 1],
-      extrapolate: 'clamp'
-    })
-    this.passItemOpacity = this.position.x.interpolate({
-      inputRange: [-appWidth / 4, 0, appWidth / 4],
-      outputRange: [1, 0, 0],
-      extrapolate: 'clamp'
-    })
-    this.nextItemScale = this.position.x.interpolate({
-      inputRange: [-appWidth / 4, 0, appWidth / 4],
-      outputRange: [1, 0.8, 1],
-      extrapolate: 'clamp'
-    })
-    this.nextItemOpacity = this.position.x.interpolate({
-      inputRange: [-appWidth / 4, 0, appWidth / 4],
-      outputRange: [1, 0, 1],
-      extrapolate: 'clamp'
-    })
-
-  }//end of constructor
-  
-  //lifecycle hook componentWillMount.Triggers before initial render and only once
-  componentWillMount() {
-    this.PanResponder = PanResponder.create({
-        
-      /*predefined method of panResponder.
-      for checking if the view want to become responder on the start of each touch*/
-      onStartShouldSetPanResponder: (event, gestureState) => true,
-      /*predefined method of panResponder. Triggered every time a movement is recognised. 
-      This enables us to track the distance travelled by the card along the x and y-axis which can be stored and worked upon.*/
-      onPanResponderMove: (event, gestureState) => {
-        //setValue function applied on Animated.ValueXY() instance 'position'
-        this.position.setValue({ x: gestureState.dx, y: gestureState.dy })
-      },
-      /*predefined method of panResponder. Triggered when the user has released all the touches. 
-       Functionality that we want to execute at the end of the gesture is implemented here.*/
-      onPanResponderRelease: (event, gestureState) => {
-
-        //if distance of the gesture since touch started is > 120
-        if (gestureState.dx > 130) {
-          /*apply spring animation using Animated.spring method on Animated.valueXY instance 'position'.
-          animation called with start()*/
-          Animated.spring(this.position, {
-            toValue: { x: appWidth + 110, y: gestureState.dy }
-          }).start(() => {
-            //Completion callback. state variable currentItemIndex updated. Component re-rendered.
-            this.setState({ currentItemIndex: this.state.currentItemIndex + 1 }, () => {
-              //setValue function applied on Animated.ValueXY() instance 'position'
-              this.position.setValue({ x: 0, y: 0 })
-            })
-          })
-        }
-        //if distance of the gesture since touch started is < -120
-        else if (gestureState.dx < -130) {
-          /*apply spring animation using Animated.spring method on Animated.valueXY instance 'position'.
-          animation called with start()*/
-          Animated.spring(this.position, {
-            toValue: { x: -appWidth - 110, y: gestureState.dy }
-          }).start(() => {
-            //Completion callback. state variable currentItemIndex updated. Component re-rendered.
-            this.setState({ currentItemIndex: this.state.currentItemIndex + 1 }, () => {
-              this.position.setValue({ x: 0, y: 0 })
-            })
-          })
-        }
-        //else create spring animation using Animated.spring method back to the default position
-        else {
-          Animated.spring(this.position, {
-            toValue: { x: 0, y: 0 },
-            friction: 5
-          }).start()
-        }
-      }
-    })
-  }
-
-  renderItems = () => {
-
-    return items.map((item, i) => {
-
-
-      if (i < this.state.currentItemIndex) {
-        return null;
-      }
-      else if (i == this.state.currentItemIndex) {
-
-        return (
-            //Animated library exports 6 animated component types : one of them is View
-
-          <Animated.View
-            {...this.PanResponder.panHandlers}
-            key={item.id} style={[this.rotateAndTranslate, { height: appHeight - 120, width: appWidth, padding: 10, position: 'absolute' }]}>
-     
-            <Animated.View style={{ opacity: this.likeItemOpacity, transform: [{ rotate: '-30deg' }], position: 'absolute', top: 50, left: 40, zIndex: 1000 }}>
-              <Text style={{ borderWidth: 3, borderColor: 'limegreen', color: 'limegreen', fontSize: 40, fontWeight: 'bold', padding: 10 }}>WANT</Text>
-            
-            </Animated.View>
-
-            <Animated.View style={{ opacity: this.passItemOpacity, transform: [{ rotate: '30deg' }], position: 'absolute', top: 50, right: 40, zIndex: 1000 }}>
-              <Text style={{ borderWidth: 3, borderColor: 'crimson', color: 'crimson', fontSize: 40, fontWeight: 'bold', padding: 10 }}>PASS</Text>
-
-            </Animated.View>
-     
-            <Image
-              style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 20 }}
-              source={item.uri} 
-              onPress = {() => navigation.navigate('ListingDetailsScreen')}/>
-              
-          
-
-          </Animated.View>
-       
-        )
-      }
-      else {
-        return (
-          <Animated.View
-
-            key={item.id} style={[{
-              opacity: this.nextItemOpacity,
-              transform: [{ scale: this.nextItemScale }],
-              height: appHeight - 120, width: appWidth, padding: 10, position: 'absolute'
-            }]}>
-            <Animated.View style={{ opacity: 0, transform: [{ rotate: '-30deg' }], position: 'absolute', top: 50, left: 40, zIndex: 1000 }}>
-              <Text style={{ borderWidth: 3, borderColor: 'limegreen', color: 'limegreen', fontSize: 40, fontWeight: 'bold', padding: 10 }}>WANT</Text>
-
-            </Animated.View>
-
-            <Animated.View style={{ opacity: 0, transform: [{ rotate: '30deg' }], position: 'absolute', top: 50, right: 40, zIndex: 1000 }}>
-              <Text style={{ borderWidth: 3, borderColor: 'crimson', color: 'crimson', fontSize: 40, fontWeight: 'bold', padding: 10 }}>PASS</Text>
-
-            </Animated.View>
-            
-            <Image
-              style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 20 }}
-              source={item.uri} />
-           
-
-          </Animated.View>
-        )
-      }
-      //render the order of the items array elements so latest item appears at the top
-    }).reverse();
-  }
-  //end of renderItems function
-  
-  //render method needs to be defined in a React.Component subclass
-  render() {
-    return (
-   
-   
-   <TouchableOpacity onPress={() => Alert.alert('image clicked')}>
-
-        <View>
-          {this.renderItems()}
+         {/* the thumbs up and down */}
+        <View style={styles.bottomContainerButtons}>
+          <MaterialCommunityIcons.Button
+            name='thumb-down'
+            size={94}
+            backgroundColor='transparent'
+            underlayColor='transparent'
+            activeOpacity={0.3}
+            color={'#fc5c65'}
+            onPress={() => swiperRef.current.swipeLeft()}
+          />
+          <MaterialCommunityIcons.Button
+            name='thumb-up'
+            size={94}
+            backgroundColor='transparent'
+            underlayColor='transparent'
+            activeOpacity={0.3}
+            color={'#26de81'}
+            onPress={() => swiperRef.current.swipeRight()}
+          />
         </View>
-      
-        {/* <View style={{ height: 30 }}>
-
-      </View> */}
-      </TouchableOpacity>
-    
-
-    );
-  }
+      </View>
+    </SafeAreaView>
+  );
 }
-//style={{ flex: 1 }}
+
+
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom:20,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: "#efc7c1"
   },
-  text:{
-    textAlign:'center',
-    fontWeight: 'bold',
-  }
+  swiperContainer: {
+    flex: 0.55
+  },
+  bottomContainer: {
+    flex: 0.45,
+    justifyContent: 'space-evenly'
+  },
+  bottomContainerMeta: { alignContent: 'flex-end', alignItems: 'center' },
+  bottomContainerButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  },
+  cardImage: {
+    width: 300,
+    flex: 1,
+    resizeMode: 'contain'
+  },
+  card: {
+    flex: 0.45,
+    borderRadius: 8,
+    shadowRadius: 25,
+    shadowColor: 'black',
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 0 },
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+  text: {
+    textAlign: 'center',
+    fontSize: 50,
+    backgroundColor: 'transparent'
+  },
+  done: {
+    textAlign: 'center',
+    fontSize: 30,
+    color: "white",
+    backgroundColor: 'transparent'
+  },
+  text: { fontFamily: 'Courier' },
+  heading: { fontSize: 24, marginBottom: 10, color: 'gray', fontWeight: 'bold' },
+  price: { color: 'gray', fontSize: 20, fontFamily: 'Courier' }
 });
