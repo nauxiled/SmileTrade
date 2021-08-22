@@ -1,18 +1,18 @@
 import * as firebase from 'firebase';
 require('firebase/auth')
 import firebaseConfig from './firebaseConfig';
+import "firebase/firestore";
 
-
-  if(!firebase.apps.length){
-    firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
 }
 
 export const auth = firebase.auth();
-export const loginWithEmail = ({email, password}) => {
+export const loginWithEmail = ({ email, password }) => {
   return auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       console.log('Successfully signed in.');
-      console.log (email)
+      console.log(email)
     })
     .catch(error => {
       alert(error);
@@ -23,6 +23,8 @@ export const registerWithEmail = (email, password) =>
   auth.createUserWithEmailAndPassword(email, password);
 
 export const logout = () => auth.signOut();
+export const db = firebase.firestore();
+
 
 
 // const Firebase ={
