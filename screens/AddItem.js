@@ -11,6 +11,9 @@ import Screen from '../Components/Screen';
 import CategoryPickerItem from '../Components/CategoryPickerItem';
 import FormImagePicker from '../Components/FormImagePicker';
 
+import firebase from 'firebase';
+
+
 const validationSchema = Yup.object().shape({
     title: Yup.string().required().min(1).label("Title"),
     price: Yup.number().required().min(1).max(10000).label("Price"),
@@ -29,6 +32,7 @@ const validationSchema = Yup.object().shape({
   ];
   
   function AddItem() {
+    
     return (
       <Screen style={styles.container}>
         <AppForm

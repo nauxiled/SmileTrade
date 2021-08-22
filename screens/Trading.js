@@ -112,7 +112,7 @@ export default function Trading({navigation}) {
           disableBottomSwipe
           overlayLabels={{
             left: {
-              title: 'PASS',
+              title: 'REJECT',
               style: {
                 label: {
                   backgroundColor: '#fc5c65',
@@ -131,7 +131,7 @@ export default function Trading({navigation}) {
               }
             },
             right: {
-              title: 'LIKE',
+              title: 'INTERESTED',
               style: {
                 label: {
                   backgroundColor: '#26de81',

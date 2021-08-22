@@ -21,10 +21,14 @@ import ChatStack from './routes/ChatNavigator';
 import Messages from './screens/Messages';
 import Providers from './routes';
 
+import firebase from 'firebase';
 //const Drawer = createDrawerNavigator();
+
 const Stack = createStackNavigator();
 
 function App() {
+
+
   let [fontsLoaded,error] =useFonts({ Satisfy_400Regular}); // IF you want to use your own fonts, ihave created a file ' Fonts" u just need to input your ttf file and declare it here using require('file directory')
 
   if (!fontsLoaded){
