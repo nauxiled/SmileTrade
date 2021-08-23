@@ -4,6 +4,7 @@ import firebaseConfig from './firebaseConfig';
 import "firebase/firestore";
 
 if (!firebase.apps.length) {
+  console.log("Connected with Database")
   firebase.initializeApp(firebaseConfig);
 }
 
@@ -24,6 +25,13 @@ export const registerWithEmail = (email, password) =>
 
 export const logout = () => auth.signOut();
 export const db = firebase.firestore();
+export const addItem = {
+  createNewItem: newItem => {
+    return db.collection('items')
+      .doc('${items.id}')
+      .set(newItem)
+  }
+}
 
 
 
