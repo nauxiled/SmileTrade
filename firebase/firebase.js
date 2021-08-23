@@ -25,14 +25,18 @@ export const registerWithEmail = (email, password) =>
 
 export const logout = () => auth.signOut();
 export const db = firebase.firestore();
-export const addItem = {
-  createNewItem: newItem => {
-    return db.collection('items')
-      .doc('${items.id}')
-      .set(newItem)
-  }
-}
 
+
+export function addItem(Item, addComplete) {
+  db.collection('Items').add({
+    title: Item.title,
+    category: Item.category,
+    description: Item.description,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }).then((data) => addComplete(data))
+    .catch((error) => alert(error));
+
+}
 
 
 // const Firebase ={

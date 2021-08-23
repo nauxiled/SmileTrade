@@ -10,6 +10,11 @@ import SubmitButton from '../Components/SubmitButton';
 import Screen from '../Components/Screen';
 import CategoryPickerItem from '../Components/CategoryPickerItem';
 import FormImagePicker from '../Components/FormImagePicker';
+import { addItem } from '../firebase/firebase';
+import AppTextInput from '../Components/AppTextInput';
+import { AuthUserProvider } from '../routes/AuthUserProvider';
+
+
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -28,7 +33,6 @@ const categories = [
   { label: "Stationary", value: 6, backgroundColor: '#a55eea', icon: 'pencil' },
 ];
 
-
 function AddItem() {
 
 
@@ -46,6 +50,8 @@ function AddItem() {
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
+
+
         <AppFormField maxLength={255} name="title" placeholder="Title" />
         <AppFormPicker items={categories} name="category" numberOfColumns={3} PickerItemComponent={CategoryPickerItem} placeholder="Category" />
         <AppFormField
