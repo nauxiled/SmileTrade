@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image,StatusBar,StyleSheet,Text,View,SafeAreaView,Dimensions,Button
+import {
+  Image, StatusBar, StyleSheet, Text, View, SafeAreaView, Dimensions, Button
 } from 'react-native';
 
 import data from '../Components/Data'
@@ -12,7 +13,7 @@ const { width } = Dimensions.get('window');
 
 const stackSize = 4;
 const ANIMATION_DURATION = 200;
- // the trading animation 
+// the trading animation 
 const transition = (
   <Transition.Sequence>
     <Transition.Out
@@ -56,7 +57,7 @@ const CardDetails = ({ index }) => (
   </View>
 );
 // looping the cards
-export default function Trading({navigation}) {
+export default function Trading({ navigation }) {
   const [index, setIndex] = React.useState(0);
   const onSwiped = () => {
     transitionRef.current.animateNextTransition();
@@ -66,12 +67,12 @@ export default function Trading({navigation}) {
   return (
     // The trading card that shows the picture 
     <SafeAreaView style={styles.container}>
-     
-      <Text style ={styles.text,{textAlign:'center', paddingTop :20, paddingBottom :0}}>
-        Pull Down To Go back Home Page 
+
+      <Text style={styles.text, { textAlign: 'center', paddingTop: 20, paddingBottom: 0 }}>
+        Pull Down To Go back Home Page
       </Text>
-    
-    
+
+
       {/* <MaterialCommunityIcons.Button 
       name="home-circle-outline" 
       size={50}
@@ -101,6 +102,7 @@ export default function Trading({navigation}) {
           infinite
           backgroundColor={'transparent'}
           onSwiped={onSwiped}
+          onSwipedRight={() => navigation.navigate("Chat")}
           onTapCard={() => swiperRef.current.swipeLeft()}
           cardVerticalMargin={50}
           stackSize={stackSize}
@@ -157,12 +159,12 @@ export default function Trading({navigation}) {
           ref={transitionRef}
           transition={transition}
 
-style={styles.bottomContainerMeta}
+          style={styles.bottomContainerMeta}
         >
           <CardDetails index={index} />
         </Transitioning.View>
 
-         {/* the thumbs up and down */}
+        {/* the thumbs up and down */}
         <View style={styles.bottomContainerButtons}>
           <MaterialCommunityIcons.Button
             name='thumb-down'
