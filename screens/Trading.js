@@ -1,5 +1,6 @@
 import React from 'react';
-import {Image,StatusBar,StyleSheet,Text,View,SafeAreaView,Dimensions,Button
+import {
+  Image, StatusBar, StyleSheet, Text, View, SafeAreaView, Dimensions, Button
 } from 'react-native';
 
 import data from '../Components/Data'
@@ -12,7 +13,7 @@ const { width } = Dimensions.get('window');
 
 const stackSize = 4;
 const ANIMATION_DURATION = 200;
- // the trading animation 
+// the trading animation 
 const transition = (
   <Transition.Sequence>
     <Transition.Out
@@ -56,44 +57,32 @@ const CardDetails = ({ index }) => (
   </View>
 );
 // looping the cards
-export default function Trading({navigation}) {
+export default function Trading({ navigation }) {
   const [index, setIndex] = React.useState(0);
+
   const onSwiped = () => {
     transitionRef.current.animateNextTransition();
     setIndex((index + 1) % data.length);
+    if (transitionRef.current.swipeRight) {
+      navigation.navigate("Chat");
+    }
   };
+
 
   return (
     // The trading card that shows the picture 
     <SafeAreaView style={styles.container}>
-     
-      <Text style ={styles.text,{textAlign:'center', paddingTop :20, paddingBottom :0}}>
-        Pull Down To Go back Home Page 
+
+      <Text style={styles.text, { textAlign: 'center', paddingTop: 20, paddingBottom: 0 }}>
+        Pull Down To Go back Home Page
       </Text>
-    
-    
-      {/* <MaterialCommunityIcons.Button 
-      name="home-circle-outline" 
-      size={50}
-      backgroundColor='transparent'
-      underlayColor='black'
-      onPress={() => navigation.navigate('Home')}
-      /> */}
-      <MaterialCommunityIcons
-        name='crop-square'
-        size={width}
-        color={'#26de81'}
-        style={{
-          opacity: 0.05,
-          transform: [{ rotate: '45deg' }, { scale: 1.6 }],
-          position: 'absolute',
-          left: -15,
-          top: 30
-        }}
-      />
+
+
       <StatusBar hidden={true} />
       <View style={styles.swiperContainer}>
         <Swiper
+
+          // navigation={() => swiperRef.current.swipeRight(navigation.navigate("Chat"))}
           ref={swiperRef}
           cards={data}
           cardIndex={index}
@@ -101,6 +90,7 @@ export default function Trading({navigation}) {
           infinite
           backgroundColor={'transparent'}
           onSwiped={onSwiped}
+          onSwipedRight={() => navigation.navigate("Chat")}
           onTapCard={() => swiperRef.current.swipeLeft()}
           cardVerticalMargin={50}
           stackSize={stackSize}
@@ -131,6 +121,7 @@ export default function Trading({navigation}) {
               }
             },
             right: {
+
               title: 'LIKE',
               style: {
                 label: {
@@ -146,8 +137,11 @@ export default function Trading({navigation}) {
                   justifyContent: 'flex-start',
                   marginTop: 20,
                   marginLeft: 20
+
                 }
+
               }
+
             }
           }}
         />
@@ -157,12 +151,12 @@ export default function Trading({navigation}) {
           ref={transitionRef}
           transition={transition}
 
-style={styles.bottomContainerMeta}
+          style={styles.bottomContainerMeta}
         >
           <CardDetails index={index} />
         </Transitioning.View>
 
-         {/* the thumbs up and down */}
+        {/* the thumbs up and down */}
         <View style={styles.bottomContainerButtons}>
           <MaterialCommunityIcons.Button
             name='thumb-down'
@@ -180,7 +174,7 @@ style={styles.bottomContainerMeta}
             underlayColor='transparent'
             activeOpacity={0.3}
             color={'#26de81'}
-            onPress={() => swiperRef.current.swipeRight()}
+            onPress={() => swiperRef.current.swipeRight(navigation.navigate("Chat"))}
           />
         </View>
       </View>

@@ -50,8 +50,6 @@ function AddItem() {
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
-
-
         <AppFormField maxLength={255} name="title" placeholder="Title" />
         <AppFormPicker items={categories} name="category" numberOfColumns={3} PickerItemComponent={CategoryPickerItem} placeholder="Category" />
         <AppFormField
