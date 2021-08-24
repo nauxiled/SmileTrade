@@ -6,21 +6,20 @@ import ListItemSeparator from '../Components/ListItemSeparator';
 import Screen from "../Components/Screen";
 
 const initialMessages = [
-{
-    id:1,
-    title: 'T1',
-    message: "Hey! Is this item still available?",
-    image: require("../assets/Jake.jpg")
-},
-{
-    id:2,
-    title: 'T2',
+  {
+    id: 1,
+    title: 'marvel@gmail.com',
+    message: "Hey! Is this item still available?"
+  },
+  {
+    id: 2,
+    title: 'milo@gmail.com',
     message: "I'm interested in this item. When will you be able to post it?",
-    image: require("../assets/Jake.jpg")
-}
+
+  }
 ]
 
-function Chat({navigation}) {
+function Chat({ navigation }) {
   const [messages, setMessages] = useState(initialMessages);
   const [refreshing, setRefreshing] = useState(false);
 
@@ -28,7 +27,7 @@ function Chat({navigation}) {
     // Delete the message from messages
     setMessages(messages.filter((m) => m.id !== message.id));
   };
-//console.log("Message selected"
+  //console.log("Message selected"
   return (
     <Screen style={styles.container}>
       <FlatList
@@ -39,7 +38,7 @@ function Chat({navigation}) {
             title={item.title}
             subTitle={item.message}
             image={item.image}
-            onPress={() => navigation.navigate('Messages', {item:item.title})}
+            onPress={() => navigation.navigate('Messages', { item: item.title })}
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
@@ -50,10 +49,10 @@ function Chat({navigation}) {
         onRefresh={() => {
           setMessages([
             {
-              id: 2,
-              title: "T2",
-              message: "D2",
-              image: require("../assets/Jake.jpg"),
+              // id: 2,
+              // title: "T2",
+              // message: "D2",
+              // image: require("../assets/Jake.jpg"),
             },
           ]);
         }}
@@ -64,7 +63,7 @@ function Chat({navigation}) {
 
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     backgroundColor: "#efc7c1"
   }
 

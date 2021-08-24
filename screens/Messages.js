@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useCallback} from 'react';
-import {View, StyleSheet} from 'react-native';
-import {Bubble, GiftedChat, Send} from 'react-native-gifted-chat';
+import React, { useState, useEffect, useCallback } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Bubble, GiftedChat, Send } from 'react-native-gifted-chat';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
@@ -11,20 +11,10 @@ const Messages = () => {
     setMessages([
       {
         _id: 1,
-        text: 'Hello developer',
+        text: 'Hi is the item available?',
         createdAt: new Date(),
         user: {
           _id: 2,
-          name: 'React Native',
-          avatar: '../assets/Jake.jpg',
-        },
-      },
-      {
-        _id: 2,
-        text: 'Hello world',
-        createdAt: new Date(),
-        user: {
-          _id: 1,
           name: 'React Native',
           avatar: '../assets/Jake.jpg',
         },
@@ -44,7 +34,7 @@ const Messages = () => {
         <View>
           <MaterialCommunityIcons
             name="send-circle"
-            style={{marginBottom: 5, marginRight: 5}}
+            style={{ marginBottom: 5, marginRight: 5 }}
             size={32}
             color="#2e64e5"
           />
@@ -61,6 +51,10 @@ const Messages = () => {
           right: {
             backgroundColor: '#2e64e5',
           },
+          left: {
+            backgroundColor: '#efc7c1',
+          },
+
         }}
         textStyle={{
           right: {
@@ -72,7 +66,7 @@ const Messages = () => {
   };
 
   const scrollToBottomComponent = () => {
-    return(
+    return (
       <FontAwesome name='angle-double-down' size={22} color='#333' />
     );
   }
@@ -89,7 +83,7 @@ const Messages = () => {
       renderSend={renderSend}
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
-      
+
     />
   );
 };
@@ -101,6 +95,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    
+
   },
 });

@@ -173,7 +173,7 @@ export default function Trading({ navigation }) {
             underlayColor='transparent'
             activeOpacity={0.3}
             color={'#fc5c65'}
-            onPress={() => swiperRef.current.swipeLeft()}
+            onPress={() => swiperRef.current.swipeLeft(navigation.navigate("Chat"))}
           />
           <MaterialCommunityIcons.Button
             name='thumb-up'
