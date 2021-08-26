@@ -1,43 +1,43 @@
 import React from 'react';
-import { Image, ImageBackground,StyleSheet,View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, View, Alert } from 'react-native';
 import RoundButton from '../Components/RoundButton';
 import AppButton from '../Components/AppButton';
 import { logout } from '../firebase/firebase';
-function Home({navigation}) {
+function Home({ navigation }) {
     async function handleSignOut() {
         try {
-          await logout();
+            await logout();
         } catch (error) {
-          console.log(error);
+            console.log(error);
         }
-      }
+    }
     return (
-       
-        <ImageBackground 
-        style = {styles.background}
-        source= {require('../assets/Beachbackground.png')}>
-        <Image style={styles.logo} source={require('../assets/smileTrade.png')}/>
-        <View style={styles.clothingIcon}>
-        <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
-        </View>
-        <View style={styles.technologyIcon}>
-        <RoundButton title="Technology" ></RoundButton>
-        </View>
-        <View style={styles.accesoriesIcon}>
-        <RoundButton title="Accessories" ></RoundButton>
-        </View>
-        <View style={styles.cardsIcon}>
-        <RoundButton title="Trading Cards"></RoundButton>
-        </View>
-        <View style={styles.decorationIcon}>
-        <RoundButton title="Decoration" ></RoundButton>
-        </View>
-        <View style={styles.stationaryIcon}>
-        <RoundButton title="Stationary" ></RoundButton>
-        <AppButton title="Log Out" onPress={handleSignOut}/>
-        </View>
+
+        <ImageBackground
+            style={styles.background}
+            source={require('../assets/Beachbackground.png')}>
+            <Image style={styles.logo} source={require('../assets/smileTrade.png')} />
+            <View style={styles.clothingIcon}>
+                <RoundButton title="Clothing" onPress={() => navigation.navigate('Trading')}></RoundButton>
+            </View>
+            <View style={styles.technologyIcon}>
+                <RoundButton title="Technology" onPress={() => Alert.alert('There is nothing to trade at the moment!')}></RoundButton>
+            </View>
+            <View style={styles.accesoriesIcon}>
+                <RoundButton title="Accessories" onPress={() => Alert.alert('There is nothing to trade at the moment!')}></RoundButton>
+            </View>
+            <View style={styles.cardsIcon}>
+                <RoundButton title="Trading Cards" onPress={() => Alert.alert('There is nothing to trade at the moment!')}></RoundButton>
+            </View>
+            <View style={styles.decorationIcon}>
+                <RoundButton title="Decoration" onPress={() => Alert.alert('There is nothing to trade at the moment!')}></RoundButton>
+            </View>
+            <View style={styles.stationaryIcon}>
+                <RoundButton title="Stationary" onPress={() => Alert.alert('There is nothing to trade at the moment!')} ></RoundButton>
+                <AppButton title="Log Out" onPress={handleSignOut} />
+            </View>
         </ImageBackground>
-       
+
     );
 }
 
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         right: 40
     },
     background: {
-        flex:1,
+        flex: 1,
         alignItems: "center",
     },
     logo: {
