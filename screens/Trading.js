@@ -182,7 +182,7 @@ export default function Trading({ navigation }) {
             underlayColor='transparent'
             activeOpacity={0.3}
             color={'#26de81'}
-            onPress={() => swiperRef.current.swipeRight()}
+            onPress={() => swiperRef.current.swipeRight(navigation.navigate("Chat"))}
           />
         </View>
       </View>
