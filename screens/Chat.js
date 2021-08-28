@@ -14,7 +14,7 @@ const initialMessages = [
   {
     id: 2,
     title: 'milo@gmail.com',
-    message: "I'm interested in this item. When will you be able to post it?",
+    message: "Hey! Is this item still available?",
 
   }
 ]

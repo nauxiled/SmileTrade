@@ -54,6 +54,7 @@ const CardDetails = ({ index }) => (
       {data[index].name}
     </Text>
     <Text style={[styles.text, styles.price]}>{data[index].description}</Text>
+    <Text style={[styles.text, styles.price]}>{data[index].owner}</Text>
   </View>
 );
 
