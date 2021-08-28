@@ -4,7 +4,7 @@ import RoundButton from '../Components/RoundButton';
 import AppButton from '../Components/AppButton';
 import { logout } from '../firebase/firebase';
 function Home({ navigation }) {
-    async function handleSignOut() {
+    async function handleonSignOut() {
         try {
             await logout();
         } catch (error) {
@@ -34,7 +34,7 @@ function Home({ navigation }) {
             </View>
             <View style={styles.stationaryIcon}>
                 <RoundButton title="Stationary" onPress={() => Alert.alert('There is nothing to trade at the moment!')} ></RoundButton>
-                <AppButton title="Log Out" onPress={handleSignOut} />
+                <AppButton title="Log Out" onPress={handleonSignOut} />
             </View>
         </ImageBackground>
 
