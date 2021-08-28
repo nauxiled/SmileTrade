@@ -56,7 +56,7 @@ const CardDetails = ({ index }) => (
     <Text style={[styles.text, styles.price]}>{data[index].description}</Text>
   </View>
 );
-// looping the cards
+
 export default function Trading({ navigation }) {
   const [index, setIndex] = React.useState(0);
   const onSwiped = () => {
@@ -72,14 +72,6 @@ export default function Trading({ navigation }) {
         Pull Down To Go back Home Page
       </Text>
 
-
-      {/* <MaterialCommunityIcons.Button 
-      name="home-circle-outline" 
-      size={50}
-      backgroundColor='transparent'
-      underlayColor='black'
-      onPress={() => navigation.navigate('Home')}
-      /> */}
       <MaterialCommunityIcons
         name='crop-square'
         size={width}
@@ -173,7 +165,7 @@ export default function Trading({ navigation }) {
             underlayColor='transparent'
             activeOpacity={0.3}
             color={'#fc5c65'}
-            onPress={() => swiperRef.current.swipeLeft(navigation.navigate("Chat"))}
+            onPress={() => swiperRef.current.swipeLeft()}
           />
           <MaterialCommunityIcons.Button
             name='thumb-up'
