@@ -44,7 +44,7 @@ function EditItem({ route }) {
           numberOfLines={3}
           placeholder="Description"
         />
-        <SubmitButton title="Post" onPress={() => Alert.alert('There is nothing to trade at the moment!')} />
+        <SubmitButton title="Update" onPress={() => Alert.alert('There is nothing to trade at the moment!')} />
       </AppForm>
     </Screen>
   );
