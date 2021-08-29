@@ -6,17 +6,17 @@ import ListItemSeparator from '../Components/ListItemSeparator';
 import Screen from "../Components/Screen";
 
 const initialMessages = [
-    {
-      id:1,
-      title: 'John',
-      description: "I'm interested in this item. When will you be able to post it? We can either meet up or send by post.",
-      image: require("../assets/John.jpg")
+  {
+    id: 1,
+    title: 'John',
+    description: "I'm interested in this item. When will you be able to post it? We can either meet up or send by post.",
+    image: require("../assets/John.jpg")
   },
   {
-      id:2,
-      title: 'Kelly',
-      description: "Hey! Is this item still available?",
-      image: require("../assets/Kelly.jpg")
+    id: 2,
+    title: 'Kelly',
+    description: "Hey! Is this item still available?",
+    image: require("../assets/Kelly.jpg")
   },
 ]
 
@@ -50,23 +50,23 @@ function Chat({ navigation }) {
         onRefresh={() => {
           setMessages([
             {
-              id:1,
+              id: 1,
               title: 'John',
               description: "Hey! Is this item still available?",
               image: require("../assets/John.jpg")
-          },
-          {
-              id:2,
+            },
+            {
+              id: 2,
               title: 'Kelly',
               description: "Hey! Is this item still available?",
               image: require("../assets/Kelly.jpg")
-          },
-          {
-            id:3,
-            title: 'Timmothy',
-            description: "I'm interested in doing trade with you",
-            image: require("../assets/Timmothy.jpg")
-        }
+            },
+            {
+              id: 3,
+              title: 'Timothy',
+              description: "I'm interested in doing trade with you",
+              image: require("../assets/Timmothy.jpg")
+            }
           ]);
         }}
       />

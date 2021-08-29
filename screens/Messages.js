@@ -15,7 +15,7 @@ const Messages = () => {
         createdAt: new Date(),
         user: {
           _id: 1,
-          name: 'React Native',
+          name: 'John',
           avatar: '../assets/Jake.jpg',
         },
       },
