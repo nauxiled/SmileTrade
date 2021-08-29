@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Screen from "./Screen";
 import PickerItem from "./PickerItem";
 
-function AppPicker({ icon, items,numberOfColumns=1, onSelectItem,PickerItemComponent = PickerItem, placeholder, selectedItem }) {
+function AppPicker({ icon, items, numberOfColumns=1, onSelectItem,PickerItemComponent = PickerItem, placeholder, selectedItem }) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
