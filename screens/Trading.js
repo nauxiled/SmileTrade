@@ -54,7 +54,6 @@ const CardDetails = ({ index }) => (
       {data[index].name}
     </Text>
     <Text style={[styles.text, styles.price]}>{data[index].description}</Text>
-    <Text style={[styles.text, styles.price]}>{data[index].owner}</Text>
   </View>
 );
 
@@ -73,18 +72,6 @@ export default function Trading({ navigation }) {
         Pull Down To Go back Home Page
       </Text>
 
-      <MaterialCommunityIcons
-        name='crop-square'
-        size={width}
-        color={'#26de81'}
-        style={{
-          opacity: 0.05,
-          transform: [{ rotate: '45deg' }, { scale: 1.6 }],
-          position: 'absolute',
-          left: -15,
-          top: 30
-        }}
-      />
       <StatusBar hidden={true} />
       <View style={styles.swiperContainer}>
         <Swiper

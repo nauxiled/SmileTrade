@@ -1,12 +1,11 @@
 import React,{useState} from 'react';
-import { ImageBackground, StyleSheet, Image, Button } from  'react-native';
+import { ImageBackground, StyleSheet, Image } from  'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
-import AppButton from '../Components/AppButton';
 import {registerWithEmail} from '../firebase/firebase';
 import ErrorMessage from '../Components/ErrorMessage';
 
