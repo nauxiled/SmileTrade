@@ -42,7 +42,6 @@ function SignUp({navigation}) {
                 onSubmit={values => handleOnSignUp(values)}
                 validationSchema = {validationSchema}
                 >
-                    { () => (
                         <>
                             <AppFormField
                                 autoCapitalize = "none"
@@ -80,7 +79,6 @@ function SignUp({navigation}) {
                             {<ErrorMessage error={registerError} visible={true} />}
                             
                         </>
-                    )}
             </Formik>
         </Screen>
         </ImageBackground>
@@ -105,49 +103,3 @@ const styles = StyleSheet.create({
 })
 
 export default SignUp;
-
-
-
-// const styles = StyleSheet.create({
-//     background: {
-//         flex: 1,
-//         justifyContent: "center",
-//         alignItems: "center",
-        
-//     },
-//     reg: {
-//         flex: 1,
-//         justifyContent: 'center',
-//         paddingLeft: 80,
-//         paddingRight: 80,
-//         alignSelf: 'stretch',
-//     },
-//     header: {
-//         fontSize: 28,
-//         fontWeight: 'bold',
-//         color: 'black',
-//         paddingBottom: 10,
-//         marginBottom: 40,
-//         borderBottomColor: '#199187',
-//         borderBottomWidth: 1,
-//     },
-//     textInput: {
-//         alignSelf: 'stretch',
-//         height: 40,
-//         marginBottom: 30,
-//         color: 'black',
-//         borderBottomColor: 'black',
-//         borderBottomWidth: 1,
-//     },
-//     button: {
-//         alignSelf: 'stretch',
-//         alignItems: 'center',
-//         padding: 20,
-//         backgroundColor: '#f6d0c6',
-//         marginTop: 30,
-//     },
-//     btnText: {
-//         color: 'black',
-//         fontWeight: 'bold',
-//     },
-// })

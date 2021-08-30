@@ -16,8 +16,6 @@ const validationSchema = Yup.object().shape({
 })
 
 
-
-
 function Login({navigation}) {
 
     const [loginError, setLoginError] = useState('');
