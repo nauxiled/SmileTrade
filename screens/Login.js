@@ -44,7 +44,6 @@ function Login({navigation}) {
                 validationSchema = {validationSchema}
                 onSubmit={values => handleOnLogin(values)}
                 >
-                    { () => (
                         <>
                             <AppFormField
                                 autoCapitalize = "none"
@@ -66,11 +65,10 @@ function Login({navigation}) {
                             />
                             <ErrorMessage error={loginError} visible={true} />
                             <SubmitButton title="Login" />
-                            <AppButton title="Go back to the Welcome Screen"  onPress={() => navigation.navigate('Welcome')}/>
-                            
-
+                            <AppButton title="Back to Welcome Screen"  
+                            onPress={() => navigation.navigate('Welcome')}/>
                         </>
-                    )}
+
             </Formik>
         </Screen>
         </ImageBackground>
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
          width: '100%',
          height: 200,
          alignSelf: 'center',
-         marginBottom: 300
+         marginBottom: 200
      },
      background: {
         flex: 1,
