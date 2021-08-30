@@ -1,7 +1,6 @@
 import React,{ useState} from 'react';
 import { ImageBackground, StyleSheet, Image } from  'react-native';
 import * as Yup from 'yup';
-import { Formik } from 'formik';
 
 import Screen from '../Components/Screen';
 import AppFormField from '../Components/AppFormField';
