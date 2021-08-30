@@ -9,6 +9,7 @@ import SubmitButton from '../Components/SubmitButton';
 import AppButton from '../Components/AppButton';
 import {loginWithEmail} from '../firebase/firebase';
 import ErrorMessage from '../Components/ErrorMessage';
+import AppForm from '../Components/AppForm';
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -37,10 +38,9 @@ function Login({navigation}) {
         source= {require('../assets/Beachbackground.png')}>
         <Screen style={styles.container}>
         <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
-            <Formik
+            
+            <AppForm
                 initialValues = {{ email: '', password: '' }}
-                // onSubmit={values => console.log(values)}
-             
                 validationSchema = {validationSchema}
                 onSubmit={values => handleOnLogin(values)}
                 >
@@ -69,7 +69,8 @@ function Login({navigation}) {
                             onPress={() => navigation.navigate('Welcome')}/>
                         </>
 
-            </Formik>
+            
+            </AppForm>
         </Screen>
         </ImageBackground>
     );
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     },
      logo:{
          width: '100%',
-         height: 200,
+         height: 200, 
          alignSelf: 'center',
          marginBottom: 200
      },

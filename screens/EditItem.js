@@ -11,13 +11,12 @@ import CategoryPickerItem from '../Components/CategoryPickerItem';
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
-  price: Yup.number().required().min(1).max(10000).label("Price"),
   description: Yup.string().label("Description"),
-  category: Yup.object().required().nullable().label("Category"),
+  progress: Yup.object().required().nullable().label("Progress"),
   images: Yup.array().min(1, "Please select at least 1 image")
 });
 
-const categories = [
+const progress = [
   { label: "In Progress", value: 1, backgroundColor: '#fc5c65', icon: 'battery-low' },
   { label: "Traded", value: 4, backgroundColor: '#26de81', icon: 'battery-high' },
 ];
@@ -36,7 +35,13 @@ function EditItem({ route }) {
         validationSchema={validationSchema}
       >
         <Image style={styles.picture} source={listing.image} />
-        <AppFormPicker items={categories} name="category" numberOfColumns={3} PickerItemComponent={CategoryPickerItem} placeholder="Category" />
+        <AppFormPicker 
+          items={progress} 
+          name="progress" 
+          numberOfColumns={3} 
+          PickerItemComponent={CategoryPickerItem} 
+          placeholder="Progress Status" 
+        />
         <AppFormField
           maxLength={255}
           multiline

@@ -8,6 +8,7 @@ import AppFormField from '../Components/AppFormField';
 import SubmitButton from '../Components/SubmitButton';
 import {registerWithEmail} from '../firebase/firebase';
 import ErrorMessage from '../Components/ErrorMessage';
+import AppForm from '../Components/AppForm';
 
 const validationSchema = Yup.object().shape({
     fname: Yup.string().required().label("First Name"),
@@ -23,11 +24,11 @@ function SignUp({navigation}) {
         async function handleOnSignUp(values, actions) {
             const { email, password } = values;
             try {
-            await registerWithEmail(email, password);
-            console.log("Registered");
-            alert("Registered, Slide the page to go back to the Welcome Screen");
+                await registerWithEmail(email, password);
+                console.log("Registered");
+                alert("Registered, Slide the page to go back to the Welcome Screen");
             } catch (error) {
-            setRegisterError(error.message);
+                setRegisterError(error.message);
             }
         }
 
@@ -37,7 +38,7 @@ function SignUp({navigation}) {
         source= {require('../assets/Beachbackground.png')}>
         <Screen style={styles.container}>
         <Image style = {styles.logo} source={require('../assets/smileTrade.png')}/>
-            <Formik
+            <AppForm
                 initialValues = {{ fname: '',lname: '', email: '', password: '' }}
                 onSubmit={values => handleOnSignUp(values)}
                 validationSchema = {validationSchema}
@@ -79,7 +80,7 @@ function SignUp({navigation}) {
                             {<ErrorMessage error={registerError} visible={true} />}
                             
                         </>
-            </Formik>
+            </AppForm>
         </Screen>
         </ImageBackground>
     );
