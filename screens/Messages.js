@@ -28,7 +28,7 @@ const Messages = () => {
     );
   }, []);
 
-  const renderSend = (props) => {
+  const sendIcon = (props) => {
     return (
       <Send {...props}>
         <View>
@@ -43,7 +43,7 @@ const Messages = () => {
     );
   };
 
-  const renderBubble = (props) => {
+  const customiseBubble = (props) => {
     return (
       <Bubble
         {...props}
@@ -78,9 +78,9 @@ const Messages = () => {
       user={{
         _id: 1,
       }}
-      renderBubble={renderBubble}
+      renderBubble={customiseBubble}
       alwaysShowSend
-      renderSend={renderSend}
+      renderSend={sendIcon}
       scrollToBottom
       scrollToBottomComponent={scrollToBottomComponent}
 
