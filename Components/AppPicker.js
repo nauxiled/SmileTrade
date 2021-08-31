@@ -18,8 +18,7 @@ function AppPicker({  items, onSelectItem,
           <Text style={styles.text}>
             {selectedItem ? selectedItem.label : placeholder}
           </Text>
-          <MaterialCommunityIcons name="chevron-down" size={20} color='black'
-          />
+          <MaterialCommunityIcons name="chevron-down" size={20} color='black'/>
         </View>
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType="slide">

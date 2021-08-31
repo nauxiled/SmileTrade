@@ -3,8 +3,6 @@ import { FlatList, StyleSheet } from "react-native";
 import Card from "../Components/Card";
 import Screen from "../Components/Screen";
 
-
-
 const listings = [
   {
     id: 1,

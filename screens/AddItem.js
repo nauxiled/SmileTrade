@@ -36,7 +36,7 @@ function AddItem() {
           category: null,
           images: []
         }}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={() => alert("Item has been successfully added")}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />

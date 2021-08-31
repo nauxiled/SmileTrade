@@ -1,15 +1,12 @@
 import React from 'react';
 import {
-  Image, StatusBar, StyleSheet, Text, View, SafeAreaView, Dimensions, Button
+  Image, StatusBar, StyleSheet, Text, View, SafeAreaView,
 } from 'react-native';
 
-import data from '../Components/Data'
+import data from '../database/data'
 import Swiper from 'react-native-deck-swiper';
 import { Transitioning, Transition } from 'react-native-reanimated';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-
-const { width } = Dimensions.get('window');
 
 const stackSize = 4;
 const ANIMATION_DURATION = 200;

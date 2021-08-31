@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Image } from "react-native";
-import * as Yup from "yup"
 
 import AppForm from '../Components/AppForm';
 import AppFormField from '../Components/AppFormField';
@@ -9,13 +8,6 @@ import SubmitButton from '../Components/SubmitButton';
 import Screen from '../Components/Screen';
 import CategoryPickerItem from '../Components/CategoryPickerItem';
 
-const validationSchema = Yup.object().shape({
-  title: Yup.string().required().min(1).label("Title"),
-  description: Yup.string().label("Description"),
-  progress: Yup.object().required().nullable().label("Progress"),
-  images: Yup.array().min(1, "Please select at least 1 image")
-});
-
 const progress = [
   { label: "In Progress", value: 1, backgroundColor: '#fc5c65', icon: 'battery-low' },
   { label: "Traded", value: 4, backgroundColor: '#26de81', icon: 'battery-high' },
@@ -23,6 +15,7 @@ const progress = [
 
 function EditItem({ route }) {
   const listing = route.params
+
   return (
 
     <Screen style={styles.container}>
@@ -31,8 +24,7 @@ function EditItem({ route }) {
           description: "",
           category: null,
         }}
-        onSubmit={(values) => console.log(values)}
-        validationSchema={validationSchema}
+        onSubmit={() => alert("Item has been updated Successfully")}
       >
         <Image style={styles.picture} source={listing.image} />
         <AppFormPicker 
@@ -49,7 +41,7 @@ function EditItem({ route }) {
           numberOfLines={3}
           placeholder="Description"
         />
-        <SubmitButton title="Update" onPress={() => Alert.alert('There is nothing to trade at the moment!')} />
+        <SubmitButton title="Update"/>
       </AppForm>
     </Screen>
   );
