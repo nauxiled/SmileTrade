@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import { ImageBackground, StyleSheet, Image } from  'react-native';
-import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Screen from '../Components/Screen';
@@ -77,7 +76,6 @@ function SignUp({navigation}) {
                                 textContentType = "password"
                             />
                             <SubmitButton title="Register" />
-                            {<ErrorMessage error={registerError} visible={true} />}
                             
                         </>
             </AppForm>
