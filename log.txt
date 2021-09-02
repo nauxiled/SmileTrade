@@ -1,0 +1,642 @@
+commit fae06133129e67cd34531fc21344a822ce70b7e2
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Sep 2 11:45:11 2021 +0800
+
+    Create README.md
+
+commit 98133dc905dad494d25677108c10831c02c1edcf
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Sep 1 11:57:27 2021 +0800
+
+    delete
+
+commit 9b0b78ff04a26069568703a8d79aeee32f9f8a0d
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Sep 1 00:56:47 2021 +0800
+
+    Alerts
+
+commit f0185e1ff14ee5c78cff922a5fb3388be01892fd
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Tue Aug 31 23:18:36 2021 +0800
+
+    Add item
+
+commit 4130141e84fce6569b2a8dd26b7169e085f9c7ef
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Tue Aug 31 09:54:59 2021 +0800
+
+    remove error message
+
+commit 8f2483531ca9dff5e58337c22d79f9e91c22de68
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 21:42:44 2021 +0800
+
+    comit
+
+commit 0e3ac540c2344dce4c1e2f2f253ab9bcc233dddb
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 21:15:24 2021 +0800
+
+    comit
+
+commit 88c26c28984d68f9a1d5799af3ab32a82eacd7a4
+Merge: 27155281 199ba7d3
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 10:09:04 2021 +0800
+
+    Merge branch 'main' of https://github.com/nauxiled/SmileTrade into main
+
+commit 27155281f3b4d00e0d4c5c8f897795ae037a8b24
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 10:08:57 2021 +0800
+
+    back to welcome screen
+
+commit 6e6f45701af816345dc3a0691cd054d2d5625046
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 10:02:56 2021 +0800
+
+    space
+
+commit 199ba7d3f54ef13d18a93bd1d2d78b5f2cf9183c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 30 01:19:35 2021 +0800
+
+    update Messages.js
+
+commit 4ff84d218f250db5b49ea82a80c858f3a2b5c713
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 30 00:26:48 2021 +0800
+
+    Update AppPicker.js
+
+commit d96b584df73a7b65c7d1021439e9da85e3f0a4f8
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 29 15:59:11 2021 +0800
+
+    update Chat
+
+commit 0af810e862c821c6d1e0ae68ac4f89f38bcb0163
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sun Aug 29 11:51:27 2021 +0800
+
+    Update EditItem.js
+
+commit b5d9b3bee5471f7fa5dfadfeadad90f3f882d9a4
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sun Aug 29 11:47:51 2021 +0800
+
+    Update Trading.js
+
+commit b7ab9a1d3eab7ea8ca1b5e49683c7438d7d60e15
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sun Aug 29 11:47:29 2021 +0800
+
+    Final Changes
+
+commit 95582079bb0f819d2d6446d16a17df25edce08f0
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sun Aug 29 11:15:54 2021 +0800
+
+    Changed
+
+commit 0044224c7cce75d14b2663b1d72c8119efbdddd6
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 28 18:16:59 2021 +0800
+
+    Update data.js,trading.js,chat.js and messages.js
+
+commit 8a34c54cb68730bbcecfb5ca21d4ea731ac7489c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 28 18:04:53 2021 +0800
+
+    Update Trading.js
+
+commit 16ea37f2c0baf439e7cbb5082cf2863cd4268f36
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 28 16:32:54 2021 +0800
+
+    Update Home.js
+
+commit ff877a8e8bc9f44cd43faf4864fd7892396fb584
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 26 16:11:14 2021 +0800
+
+    Alert button
+
+commit f86a6c911e87350c5592571d80b2101afaf6fc5b
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 26 16:03:29 2021 +0800
+
+    navigation to chat
+
+commit 38a933e35cb87b7a6d527495a791e302b3c34cc4
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 25 00:20:34 2021 +0800
+
+    Changing the color of the chat bubble
+
+commit 4c990d9d9a97df2ee7cfc97224f9b79c94d3f1de
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Tue Aug 24 23:57:49 2021 +0800
+
+    Navigation navigate chat
+
+commit 143bdd874704bcf19ab59b0b91d938c6c79d55fa
+Merge: 84b1866e d39e6bf4
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 21 18:27:49 2021 +0800
+
+    Merge pull request #10 from nauxiled/Changes-Trading-Page
+    
+    Changes to trading page
+
+commit d39e6bf491db75ae766cf0a51d99ae4872be5383
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 21 18:25:49 2021 +0800
+
+    Changes to trading page
+
+commit 84b1866e7c87d574f7a3af0a0176fc9d9fa1ef20
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Fri Aug 20 17:52:57 2021 +0800
+
+    Update firebase.js
+
+commit de60bf80e082c7eaed92598b96b7e3f5dbd8926c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 22:29:47 2021 +0800
+
+    Ran application on port 19000
+
+commit 6ea0e71f6a4d691ca7461793eaeb2c2ab7f6e55a
+Merge: c2e84b9d a88d5759
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 22:23:04 2021 +0800
+
+    Merge pull request #9 from nauxiled/Evas's-backend
+    
+    Evas's backend
+
+commit a88d575955de236f86553ce129273d883efef3fa
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 21:39:29 2021 +0800
+
+    show the session in console
+
+commit a1216f041c049c5fc143e03114f761940e2c15e7
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 21:03:40 2021 +0800
+
+    Backend for login Success
+
+commit 54c771219f1b4f4f5e6fa082aa5ff6f9ad838a53
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 18:31:36 2021 +0800
+
+    Putting up the alert
+
+commit c2e84b9d168e302021751687940ab5d6ca345891
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 16:40:12 2021 +0800
+
+    Update packager-info.json
+
+commit f70d01a94f4a9b2214fc7ceecf1d486eabe8fc74
+Merge: dc9282af 552af751
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 16:36:01 2021 +0800
+
+    Merge branch 'Evas's-backend' into main
+
+commit dc9282af4ed8335c5c55c441bdc5089df5034147
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 16:35:40 2021 +0800
+
+    Update packager-info.json
+
+commit 552af751b35e3d62f4aa944b3dbbb7da85a8fb21
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 16:17:27 2021 +0800
+
+    Sign in back end done
+    
+    Navigation to home screen is not done
+
+commit a178a91538ba56d65f00246ec20f4138a1a2f094
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 15:20:18 2021 +0800
+
+    Delete comments
+
+commit b6865925acf76ad18f5791b1caaacd55b16e2edd
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 15:14:02 2021 +0800
+
+    Update Routes.js
+
+commit 5f98762b1eccef233a819897fc05e0a549b17017
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 15:12:44 2021 +0800
+
+    Update Routes.js
+
+commit 3d11fd4f9234f8e9962dc32eb97c373abedb81c5
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 15:10:45 2021 +0800
+
+    comment
+
+commit 2ced2a836b64216fe33358ab95ee903c62af952f
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 15:01:33 2021 +0800
+
+    Update Routes.js
+
+commit efbe74142a4b0073cb5d96947af90597d59e55b3
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 14:43:46 2021 +0800
+
+    backend-for signup
+
+commit 2e244da19dd28c4edf3809449a57a0e67b43aaba
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Aug 19 01:07:21 2021 +0800
+
+    try 2 ( Fail )
+
+commit e165cf2c54e570b06ca7a555eced2e45268f6f1c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 23:47:46 2021 +0800
+
+    Try 1 firebase
+
+commit eec331291d3c4bcb88e0c87e150c6088032088d4
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 23:26:05 2021 +0800
+
+    Update firebase.js
+
+commit 3f4d5f420151b748e0bacfa1c20d803dfb469583
+Merge: f809dc83 8386be50
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 21:57:07 2021 +0800
+
+    Merge branch 'backend' of https://github.com/nauxiled/SmileTrade into backend-Eva
+
+commit f809dc8382157b26747f948f5b41b82524902fae
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 21:56:49 2021 +0800
+
+    Update Login.js
+
+commit 1fd26dee98f41b54f1036da9d20b5e944200ebcb
+Merge: 35ada2ba 8386be50
+Author: durgalingon <34094013+durgalingon@users.noreply.github.com>
+Date:   Wed Aug 18 21:55:16 2021 +0800
+
+    Merge pull request #7 from nauxiled/backend
+    
+    Backend
+
+commit 8386be50233cdb47d6f91710230c9dd585974af3
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Aug 18 21:54:33 2021 +0800
+
+    working
+
+commit 9e3252beb034f923d15ea4684858398db3f3ff43
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Aug 18 21:51:05 2021 +0800
+
+    comit
+
+commit 64619b1dc927cb8c82cbcb4508b29c3a1b0c8729
+Merge: 57f3d31e 35ada2ba
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Aug 18 21:50:50 2021 +0800
+
+    comit
+
+commit 57f3d31e9deb1964bc89197c750c6b0e4b878661
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Aug 18 21:34:31 2021 +0800
+
+    list
+
+commit 35ada2ba9b01ab7c0061e8b13114d45c13cff19e
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 18:47:16 2021 +0800
+
+    Delete .packager-info 2.json.icloud
+
+commit 3971373d29b0966c12684807eb42e92e76bb135a
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 18:47:14 2021 +0800
+
+    Delete .SmileTrade 2.code-workspace.icloud
+
+commit a3c723e2de7ac173c99f273948d3fb47b656f466
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Wed Aug 18 17:23:42 2021 +0800
+
+    update cloud
+
+commit a7d6580bf13aba24a3c5c42b41859feb619e1dc6
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Wed Aug 18 13:15:31 2021 +0800
+
+    delete
+
+commit d0be46fb7d358067b3aabee93ce1c97296d3832c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Tue Aug 17 14:25:31 2021 +0800
+
+    Update AppNavigator.js
+
+commit 9183d6ef3514fa3e7cfc0394142cad496ea3d8bf
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 23:12:35 2021 +0800
+
+    AppNavigator
+
+commit d860bd034bd297a8124f829585317b0bcbd48034
+Merge: 84e41689 b549eec7
+Author: durgalingon <34094013+durgalingon@users.noreply.github.com>
+Date:   Mon Aug 16 19:37:37 2021 +0800
+
+    Merge pull request #6 from nauxiled/backend
+    
+    Backend
+
+commit 84e41689ea49919d9f424100b03e52eb7c3589a0
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 19:28:07 2021 +0800
+
+    Update AppNavigator.js
+
+commit b549eec764c5c34a29d6a1a2fa6300110bfd43f4
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 19:17:04 2021 +0800
+
+    Front end
+
+commit 979e7c909eb632ef1e1e01c4c658eb95fd3857f3
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 18:26:59 2021 +0800
+
+    update
+
+commit e0ac8dad7e43508845fda2dee6a1be2516badd78
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 16:10:34 2021 +0800
+
+    Home Icon Position
+
+commit 5bdf100ebc856435e6fbe1805c3370752be756d1
+Author: durgalingon <34094013+durgalingon@users.noreply.github.com>
+Date:   Mon Aug 16 15:54:34 2021 +0800
+
+    Rename chat.js to Chat.js
+
+commit 941e3ce5f08652143efcdf2d7bb9ca33e2166942
+Author: durgalingon <34094013+durgalingon@users.noreply.github.com>
+Date:   Mon Aug 16 15:53:33 2021 +0800
+
+    Rename home.js to Home.js
+
+commit 5a3180c6667f562d2f742de6ad87d21d1c6746dc
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 15:50:26 2021 +0800
+
+    Update home.js
+
+commit 3099e3cee215724bb79cd39eb2dc70491bf92cbf
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 15:41:48 2021 +0800
+
+    input pictures into assets
+
+commit 6ebee7b2aa0069b96de83baf67db5fee8a1c25da
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 14:52:51 2021 +0800
+
+    input pictures into assets
+
+commit 543130b96eaab5435f4582fb8846bdceb333eda0
+Merge: 8addbe90 bac54b15
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 14:46:02 2021 +0800
+
+    Merge pull request #5 from nauxiled/Trading(Integrate)
+    
+    Merge the Integration of Trading
+
+commit bac54b15295a9570c35f8168e4092744cb5033f4
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 14:43:27 2021 +0800
+
+    Update HomeNavigator.js
+
+commit 8addbe908896e32e3efefe8aca026c4c20bb98a2
+Merge: 00244731 a628d215
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 14:42:00 2021 +0800
+
+    Merge pull request #4 from nauxiled/Chatlist_deco(RQ)
+    
+    Trading integrate
+
+commit 00244731d22298ec228c81458be7eeb1ec241d9e
+Merge: 0b154539 144e90e8
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 14:39:25 2021 +0800
+
+    Merge branch 'main' of https://github.com/nauxiled/SmileTrade into main
+
+commit 0b1545395fe84d8801ad1372d27ed7ec5b33c7f7
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Mon Aug 16 14:39:22 2021 +0800
+
+    Update AppNavigator.js
+
+commit 144e90e85553bdae782bf53ba49f4ca7581240be
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 14:35:00 2021 +0800
+
+    Update AppNavigator.js
+
+commit a628d215d93b2f39fd1bd3fab56cd8dddbac16f9
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 14:32:09 2021 +0800
+
+    Change in the  chat avatar
+
+commit 3365ab43d4b02a9f196527ccf46a2b64c4f10a94
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 16 00:35:33 2021 +0800
+
+    Update HomeNavigator.js
+
+commit 5785b482a371a88e689f123829f424c42d12a78c
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 15 23:44:15 2021 +0800
+
+    add white dress to assets
+
+commit 3563cf2f41069561bc9166f78e8d44c675eb3449
+Merge: 635e8278 b948a581
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 15 23:35:03 2021 +0800
+
+    Merge pull request #3 from nauxiled/Chatlist_deco(RQ)
+    
+    Integrating
+
+commit b948a581afcc0f552de79832a7ff817a80738419
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 15 23:30:21 2021 +0800
+
+    updated
+
+commit 5fbc6d914e88d6ce3a53f9da4e3b304dc5c13bad
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 15 23:22:15 2021 +0800
+
+    updated
+
+commit 635e82786e99a85d307524af1ea922801b6e5572
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sun Aug 15 00:30:03 2021 +0800
+
+    hi
+
+commit bb6661ad43846f4652538f256c88f02a3e09a8b6
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Sat Aug 14 22:13:43 2021 +0800
+
+    hello
+
+commit dbd16d184fc25eb800a3f116c5a4323ef24ae895
+Merge: 7dfe5ea1 5bf3bd5d
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 14 13:21:17 2021 +0800
+
+    Merge pull request #2 from nauxiled/Messages&GiftedChat
+    
+    Messages&gifted chat
+
+commit 5bf3bd5d9e4f903874dd1107d8968b20570af1e6
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 14 13:20:24 2021 +0800
+
+    Try to do an alert
+
+commit ac4ee0d832cfe8f441ccddd889b58b1675100d49
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 14 09:24:31 2021 +0800
+
+    Message UI updated
+    
+    Static Messages
+
+commit 05fa4a30642e7bada67c9ebf3ff7735b46df41ba
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Aug 14 08:52:32 2021 +0800
+
+    ChatNavigation Done
+
+commit 7dfe5ea1a47d965a8bcaa0ccbc19dabbe4f5eafd
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Fri Aug 13 23:33:39 2021 +0800
+
+    Update AppNavigator.js
+
+commit b57e3aa567ba773e01c603c8763b78995a9e13aa
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Fri Aug 13 19:17:58 2021 +0800
+
+    Update ListingDetails.js
+
+commit 8733a36aa116f5007ba360e56643d67b70191102
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Fri Aug 13 19:16:55 2021 +0800
+
+    change the chat
+
+commit b169cbf472e831674ffecf599b763f83df938eb9
+Merge: 4692f0ad 55df6ccd
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Fri Aug 13 19:04:52 2021 +0800
+
+    Merge branch 'main' of https://github.com/nauxiled/SmileTrade into main
+
+commit 55df6ccd61d1dfb5600823f6e498d187a4d6d0b6
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Fri Aug 13 19:04:25 2021 +0800
+
+    Update AppNavigator.js
+
+commit 4692f0adda596fbba490d693b3d082702f206e53
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Fri Aug 13 19:02:55 2021 +0800
+
+    Create SmileTrade.code-workspace
+
+commit 6d8099a9dc32b4b9a939514d25761afced874707
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Fri Aug 13 19:02:15 2021 +0800
+
+    Navigation(App)
+
+commit 2dd2ce02a627275c02a853c29fbf9f1e197ac215
+Author: durgalingon <durgalingon123@gmail.com>
+Date:   Fri Aug 13 18:01:32 2021 +0800
+
+    update with chat , welcome , login and sign up
+
+commit 05d4053fe09e488577996eb802cd5d41e5d16742
+Merge: 5300ad6d a67798cb
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 8 22:26:38 2021 +0800
+
+    Merge pull request #1 from nauxiled/Log_in
+    
+    Log in
+
+commit a67798cb20b26402987262ce8b6f2ce2877a088b
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 8 22:26:08 2021 +0800
+
+    Refactoring the navigation
+
+commit 8f01b8b88aee18e92ac2fbd936069b6620c0a897
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 8 14:42:50 2021 +0800
+
+    integrating log in with drawer navigation
+
+commit 75ac76aeda984e03947a120d120a7fd9f0910d67
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 8 14:29:13 2021 +0800
+
+    added to assets
+
+commit 5300ad6d005cca5359efa7f367e2819d3ec86f31
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Mon Aug 2 22:39:10 2021 +0800
+
+    Comment in Line 46
+
+commit a43ac02f4b41cc0105318f06dc79aa939559e3cc
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 1 23:00:19 2021 +0800
+
+    Running on expo
+
+commit 20892eecdfba984ab9f26e080e0ace1d60dadf66
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sun Aug 1 19:25:14 2021 +0800
+
+    Side Menu codes
