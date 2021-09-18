@@ -36,21 +36,22 @@ function AddItem() {
           category: null,
           images: []
         }}
+        // alerting the user
         onSubmit={() => alert("Item has been successfully added")}
         validationSchema={validationSchema}
       >
         <FormImagePicker name="images" />
-        <AppFormField 
-          maxLength={255} 
-          name="title" 
-          placeholder="Title" 
+        <AppFormField
+          maxLength={255}
+          name="title"
+          placeholder="Title"
         />
-        <AppFormPicker 
-          items={categories} 
-          name="category" 
-          numberOfColumns={3} 
-          PickerItemComponent={CategoryPickerItem} 
-          placeholder="Category" 
+        <AppFormPicker
+          items={categories}
+          name="category"
+          numberOfColumns={3}
+          PickerItemComponent={CategoryPickerItem}
+          placeholder="Category"
         />
         <AppFormField
           maxLength={255}
@@ -59,6 +60,7 @@ function AddItem() {
           numberOfLines={3}
           placeholder="Description"
         />
+        {/* alerting the user */}
         <SubmitButton title="Post" onPress={() => Alert.alert('Upload Successfully!')} />
       </AppForm>
     </Screen>

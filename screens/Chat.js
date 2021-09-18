@@ -28,7 +28,7 @@ function Chat({ navigation }) {
     // Delete the message from messages
     setMessages(messages.filter((m) => m.id !== message.id));
   };
-  //console.log("Message selected"
+
   return (
     <Screen style={styles.container}>
       <FlatList
@@ -46,6 +46,7 @@ function Chat({ navigation }) {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        // refresh the list and messages will come out 
         refreshing={refreshing}
         onRefresh={() => {
           setMessages([

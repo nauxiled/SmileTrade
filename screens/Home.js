@@ -12,7 +12,7 @@ function Home({ navigation }) {
         }
     }
     return (
-
+        // the main page and the buttons
         <ImageBackground
             style={styles.background}
             source={require('../assets/Beachbackground.png')}>
