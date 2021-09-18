@@ -1,3 +1,15 @@
+commit d62c8011380ab6f1e456e31434e5a019ba129e2a
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Sat Sep 18 17:20:03 2021 +0800
+
+    comments on Additem,chat and Home
+
+commit 7e64c8c4ec46cf66c3b7d012ef2a064f8578ca8e
+Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
+Date:   Thu Sep 2 12:19:13 2021 +0800
+
+    Create log.txt
+
 commit fae06133129e67cd34531fc21344a822ce70b7e2
 Author: evalyn1998 <83055868+evalyn1998@users.noreply.github.com>
 Date:   Thu Sep 2 11:45:11 2021 +0800
