@@ -18,3 +18,10 @@ For Version control:
 Install ungit into the repository by typing "npm install -g ungit" or "sudo -H npm install -g ungit"
 After installing, you can see the version control in the brower by :
 - Type the ungit command into the terminal
+
+\
+
+Feedbacks from marker 
+
+<img width="1145" alt="image" src="https://user-images.githubusercontent.com/83055868/154969841-2bc64005-f3c8-4df7-86be-8f23cb98dc5b.png">
+
